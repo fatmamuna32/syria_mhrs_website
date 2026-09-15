@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+/* =========================
+   ROOT
+========================= */
+
+:root {
+    --green-dark: #054239;
+    --green: #428177;
+    --green-light: #eaf4f2;
+    --gold: #B9A779;
+    --bg: #f6fbfc;
+    --white: #ffffff;
+    --text: #263238;
+    --muted: #778589;
+    --border: #e1ebeb;
+    --shadow: 0 10px 30px rgba(5, 66, 57, 0.08);
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Tajawal", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 100%;
+}
+
+.question-details-section {
+    padding: 70px 20px 90px;
+}
+
+.question-details-container {
+    width: min(900px, 100%);
+    margin: 0 auto;
+}
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading-line {
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 20px;
+    margin: 0 auto 16px;
+}
+
+.page-heading h1 {
+    color: var(--green-dark);
+    font-size: 38px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.page-heading h1 i {
+    color: var(--gold);
+    font-size: 30px;
+}
+
+.page-heading p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/* =========================
+   PATIENT CARD
+========================= */
+
+.patient-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 25px 28px;
+    box-shadow: var(--shadow);
+    margin-bottom: 18px;
+}
+
+/* =========================
+   PATIENT HEADER
+========================= */
+
+.patient-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.patient-header h1 {
+    margin: 0;
+    text-align: center;
+    color: var(--green-dark);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* =========================
+   PATIENT INFO
+========================= */
+
+.patient-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.info-label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.info-item strong {
+    color: var(--green-dark);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* =========================
+   QUESTION + ANSWER
+========================= */
+
+.question-card,
+.answer-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 27px 28px;
+    box-shadow: var(--shadow);
+    margin-bottom: 18px;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.title-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: var(--green-light);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.section-title h2 {
+    color: var(--green-dark);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+/* =========================
+   QUESTION
+========================= */
+
+.question-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+}
+
+.question-box p {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.9;
+    margin-bottom: 3px;
+}
+
+.question-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   ANSWER BOX
+========================= */
+
+.answer-box {
+    position: relative;
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.answer-box:focus-within {
+    border-color: var(--green);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(66, 129, 119, 0.08);
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.answer-box textarea {
+    display: block;
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 17px 17px 58px;
+    font-family: "Tajawal", sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.answer-box textarea::placeholder {
+    color: var(--muted);
+}
+
+/* =========================
+   ANSWER TOOLS
+========================= */
+
+.answer-tools {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    direction: ltr;
+}
+
+.answer-tool {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    color: var(--green);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.answer-tool i {
+    font-size: 16px;
+}
+
+.answer-tool:hover {
+    background: var(--green-light);
+    border-color: var(--green);
+    color: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   SELECTED FILES
+========================= */
+
+.selected-files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.selected-file {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    border: 1px solid rgba(66, 129, 119, 0.2);
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+.answer-btn {
+    width: 180px;
+    height: 46px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background: var(--green);
+    color: var(--white);
+    font-family: "Tajawal", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.answer-btn:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .question-details-section {
+        padding: 45px 15px 60px;
+    }
+
+    .page-heading {
+        margin-bottom: 30px;
+    }
+
+    .page-heading h1 {
+        font-size: 29px;
+    }
+
+    .page-heading h1 i {
+        font-size: 24px;
+    }
+
+    .patient-card,
+    .question-card,
+    .answer-card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .patient-header h1 {
+        font-size: 20px;
+    }
+
+    .patient-info {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .section-title h2 {
+        font-size: 18px;
+    }
+
+    .title-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .question-box {
+        padding: 16px;
+    }
+
+    .question-box p {
+        font-size: 14px;
+    }
+
+    .answer-box textarea {
+        min-height: 145px;
+        font-size: 14px;
+        padding: 15px 15px 55px;
+    }
+
+    .answer-tools {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .answer-tool {
+        width: 33px;
+        height: 33px;
+    }
+
+    .answer-btn {
+        width: 100%;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .patient-card,
+    .question-card,
+    .answer-card {
+        padding: 17px;
+    }
+
+    .patient-header h1 {
+        font-size: 19px;
+    }
+
+    .question-box p {
+        font-size: 13px;
+    }
+
+    .section-title h2 {
+        font-size: 17px;
+    }
+
+    .answer-tool {
+        width: 31px;
+        height: 31px;
+    }
+}

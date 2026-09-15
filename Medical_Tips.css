@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+:root {
+    --green-dark: #054239;
+    --green: #428177;
+    --gold: #B9A779;
+    --bg: #f6fbfc;
+    --text: #263238;
+    --muted: #778589;
+    --border: #e2ebed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Tajawal", Arial, Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* ================= HERO ================= */
+
+.tips-hero {
+    min-height: 430px;
+
+    background: var(--green-dark);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.tips-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .05);
+
+    top: -150px;
+    right: -100px;
+}
+
+.tips-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(185, 167, 121, .08);
+
+    bottom: -150px;
+    left: -100px;
+}
+
+.tips-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 750px;
+}
+
+.hero-icon {
+    width: 85px;
+    height: 85px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 38px;
+}
+
+.tips-hero h1 {
+    color: #fff;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.tips-hero p {
+    color: #e6f1ef;
+
+    font-size: 18px;
+
+    margin-bottom: 28px;
+}
+
+.hero-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background: var(--gold);
+    color: #fff;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.hero-btn:hover {
+    background: #fff;
+    color: var(--green-dark);
+}
+
+.hero-btn i {
+    font-size: 13px;
+}
+
+
+/* ================= GENERAL ================= */
+
+.container {
+    width: min(90%, 1100px);
+    margin: auto;
+}
+
+.tips-section {
+    background: var(--bg);
+
+    padding: 75px 0;
+}
+
+
+/* ================= TIPS GRID ================= */
+
+.tips-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ================= TIP CARD ================= */
+
+.tip-card {
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    transition: .25s ease;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .03);
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .08);
+}
+
+
+/* ================= ICON ================= */
+
+.tip-icon {
+    width: 70px;
+    height: 70px;
+
+    margin-bottom: 17px;
+
+    border-radius: 50%;
+
+    background: #e2f2f0;
+    color: var(--green);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+
+/* ================= TITLE ================= */
+
+.tip-content h3 {
+    color: var(--green-dark);
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================= TEXT ================= */
+
+.tip-content p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #edf2f2;
+}
+
+.tip-content p:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   MOBILE - MEDICAL TIPS
+========================================= */
+
+@media (max-width: 700px) {
+
+    .tips-section {
+        padding: 45px 0;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .tip-card {
+        width: 100%;
+        padding: 20px;
+        border-radius: 14px;
+
+        display: block;
+    }
+
+    .tip-icon {
+        width: 58px;
+        height: 58px;
+
+        margin-bottom: 13px;
+
+        font-size: 25px;
+    }
+
+    .tip-content h3 {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .tip-content p {
+        font-size: 14px;
+        line-height: 1.9;
+
+        padding: 9px 0;
+    }
+
+    .tips-hero {
+        min-height: 400px;
+        padding: 50px 20px;
+    }
+
+    .hero-icon {
+        width: 70px;
+        height: 70px;
+
+        font-size: 30px;
+
+        margin-bottom: 15px;
+    }
+
+    .tips-hero h1 {
+        font-size: 30px;
+    }
+
+    .tips-hero p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .hero-btn {
+        font-size: 14px;
+        padding: 11px 22px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .tips-section {
+        padding: 35px 0;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .tip-card {
+        padding: 17px;
+        border-radius: 13px;
+    }
+
+    .tip-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 22px;
+
+        margin-bottom: 11px;
+    }
+
+    .tip-content h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .tip-content p {
+        font-size: 13px;
+        line-height: 1.85;
+        padding: 8px 0;
+    }
+
+    .tips-hero {
+        min-height: 370px;
+        padding: 45px 15px;
+    }
+
+    .tips-hero h1 {
+        font-size: 27px;
+    }
+
+    .tips-hero p {
+        font-size: 14px;
+    }
+}

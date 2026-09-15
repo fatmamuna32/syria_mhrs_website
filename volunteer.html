@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>شروط التطوع</title>
+
+    <link rel="stylesheet" href="volunteer.css">
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+<!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <!-- زر القائمة -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <!-- الشعار -->
+        <a href="index.html" class="logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </a>
+
+        <!-- القائمة -->
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="القائمة الرئيسية">
+
+            <a href="index.html">
+                الرئيسية
+            </a>
+
+            <a href="pharmacy.html">
+                الصيدليات المناوبة
+            </a>
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+        </nav>
+
+        <!-- تسجيل الدخول -->
+       <a
+            href="patient-profile.html"
+            class="user-icon"
+            aria-label="تسجيل الدخول"
+            title="تسجيل الدخول">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="volunteer-hero" id="home">
+
+        <div class="volunteer-content">
+
+            <h1>
+                مرحبًا بك في منصة الأطباء المتطوعين
+            </h1>
+
+            <p>
+                ساهم بخبرتك الطبية لدعم المرضى وتقديم الرعاية لمن يحتاجها.
+                <br>
+                معًا نصنع أثرًا
+            </p>
+
+            <a href="#volunteer-form" class="volunteer-btn">
+                تطوع الآن
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <div class="page-container">
+
+            <!-- ================= القسم الأول ================= -->
+
+            <section class="form-section" id="volunteer-form">
+
+                <h1 class="page-title">
+                    يرجى تعبئة البيانات لاكمال تسجيلك
+                </h1>
+
+                <h4 style="text-align: center; margin-bottom: 20px;">
+                    معلومات الشخصية
+                </h4>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            رقم الهاتف *
+                        </label>
+
+                        <input type="tel"
+                               placeholder="ادخل رقم الهاتف"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            الاسم الكامل *
+                        </label>
+
+                        <input type="text"
+                               placeholder="مثال: د. احمد"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            المدينة *
+                        </label>
+
+                        <select required>
+
+                            <option value="">
+                                اختر المدينة
+                            </option>
+
+                            <option>دمشق</option>
+                            <option>حلب</option>
+                            <option>حمص</option>
+                            <option>حماة</option>
+                            <option>اللاذقية</option>
+                            <option>طرطوس</option>
+                            <option>درعا</option>
+                            <option>السويداء</option>
+                            <option>دير الزور</option>
+                            <option>الرقة</option>
+                            <option>إدلب</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            البريد الاكتروني *
+                        </label>
+
+                        <input type="email"
+                               placeholder="ahmad@gmail.com"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group full-width">
+
+                        <label>
+                            التخصص *
+                        </label>
+
+                        <select required>
+
+                            <option value="">
+                                اختر تخصصك
+                            </option>
+
+                            <option>طب الأسرة</option>
+                            <option>الباطنية</option>
+                            <option>الأطفال</option>
+                            <option>الجلدية</option>
+                            <option>القلب</option>
+                            <option>النساء والولادة</option>
+                            <option>الجراحة</option>
+                            <option>العيون</option>
+                            <option>الأنف والأذن والحنجرة</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button class="next-btn" type="button">
+                    الحفظ والمتابعة
+                </button>
+
+            </section>
+
+
+            <!-- ================= القسم الثاني ================= -->
+
+            <section class="form-section">
+
+                <h1 class="page-title">
+                    يرجى تعبئة البيانات لاكمال تسجيلك
+                </h1>
+
+                <h4 style="text-align: center; margin-bottom: 20px;">
+                    اوقات التطوع
+                </h4>
+
+                <div class="volunteer-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            ايام العمل
+                        </label>
+
+                        <select>
+
+                            <option>الأحد</option>
+                            <option>الاثنين</option>
+                            <option>الثلاثاء</option>
+                            <option>الأربعاء</option>
+                            <option>الخميس</option>
+                            <option>الجمعة</option>
+                            <option>السبت</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            ايام العمل
+                        </label>
+
+                        <select>
+
+                            <option>الاثنين</option>
+                            <option>الثلاثاء</option>
+                            <option>الأربعاء</option>
+                            <option>الخميس</option>
+                            <option>الجمعة</option>
+                            <option>السبت</option>
+                            <option>الأحد</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            من الساعة
+                        </label>
+
+                        <select>
+
+                            <option>08:00 صباحا</option>
+                            <option>09:00 صباحا</option>
+                            <option>10:00 صباحا</option>
+                            <option>11:00 صباحا</option>
+                            <option>12:00 ظهرا</option>
+                            <option>01:00 م</option>
+                            <option>02:00 م</option>
+                            <option>03:00 م</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            الى الساعة
+                        </label>
+
+                        <select>
+
+                            <option>03:00 صباحا</option>
+                            <option>10:00 صباحا</option>
+                            <option>11:00 صباحا</option>
+                            <option>12:00 ظهرا</option>
+                            <option>01:00 م</option>
+                            <option>02:00 م</option>
+                            <option>03:00 م</option>
+                            <option>04:00 م</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            مدة الجلسة
+                        </label>
+
+                        <select>
+
+                            <option>15 دقيقة</option>
+                            <option>20 دقيقة</option>
+                            <option>25 دقيقة</option>
+                            <option>30 دقيقة</option>
+                            <option>35 دقيقة</option>
+                            <option>40 دقيقة</option>
+                            <option>مخصص</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            مدة الجلسة
+                        </label>
+
+                        <input type="text"
+                               placeholder="اكتب المدة المناسبة">
+
+                    </div>
+
+                </div>
+
+
+                <button class="next-btn" type="button">
+                    الحفظ والمتابعة
+                </button>
+
+            </section>
+
+
+            <!-- ================= القسم الثالث ================= -->
+
+            <section class="form-section">
+
+                <h1 class="page-title">
+                    يرجى تعبئة البيانات لاكمال تسجيلك
+                </h1>
+
+                <h4 style="text-align: center; margin-bottom: 20px;">
+                    اختر الاوقات التي ستكون متاحا فيها لاستقبال المرضى
+                </h4>
+
+
+                <div class="times-grid">
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>9:00 ص</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>8:30 ص</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>10:00 ص</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>10:30 ص</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>11:00 ص</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>11:30 ص</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>12:00 م</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>12:30 م</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>01:00 م</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>01:30 م</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>02:00 م</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>02:30 م</span>
+                    </label>
+
+                    <label class="time-option">
+                        <input type="checkbox">
+                        <span>03:00 م</span>
+                    </label>
+
+                </div>
+
+
+                <label class="agree-box">
+
+                    <input type="checkbox" required>
+
+                    <span>
+                        أوافق على شروط التطوع وسياسة الخصوصية الاستخدام
+                    </span>
+
+                </label>
+
+
+                <button class="submit-btn" type="button">
+                    إرسال الطلب
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+   <!-- ================= FOOTER ================= -->
+<footer>
+
+        <div class="footer-logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </div>
+
+   
+
+
+
+        <div class="footer-links">
+
+  <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="all-questions.html">
+                الأسئلة الشائعة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="about.html">
+                من نحن
+            </a>
+
+
+            <a href="privacy.html">
+                سياسة الخصوصية
+            </a>
+
+
+            <a href="volunteerr.html">
+                شروط التطوع
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+        </div>
+
+        <hr>
+
+
+        <p>
+            جميع الحقوق محفوظة لشركة © 2026
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navbar = document.getElementById("navbar");
+
+
+        menuToggle.addEventListener("click", function () {
+
+            navbar.classList.toggle("show");
+
+        });
+
+
+        document.querySelectorAll(".navbar a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navbar.classList.remove("show");
+
+            });
+
+        });
+
+
+        document.querySelectorAll(".next-btn").forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                const section = this.closest(".form-section");
+
+                const inputs = section.querySelectorAll(
+                    "input[required], select[required]"
+                );
+
+                let valid = true;
+
+
+                inputs.forEach(function (input) {
+
+                    if (!input.value) {
+
+                        valid = false;
+
+                        input.style.borderColor = "#c44";
+
+                    } else {
+
+                        input.style.borderColor = "";
+
+                    }
+
+                });
+
+
+                if (!valid) {
+
+                    alert("يرجى تعبئة البيانات المطلوبة");
+
+                    return;
+
+                }
+
+
+                const nextSection = section.nextElementSibling;
+
+                if (nextSection) {
+
+                    nextSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            });
+
+        });
+
+
+        document.querySelector(".submit-btn").addEventListener("click", function (event) {
+
+            const agree = document.querySelector(".agree-box input");
+
+
+            if (!agree.checked) {
+
+                event.preventDefault();
+
+                alert("يرجى الموافقة على شروط التطوع وسياسة الخصوصية");
+
+                return;
+
+            }
+
+
+            alert("تم إرسال طلب التطوع بنجاح");
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+
+/* =========================
+   ROOT
+========================= */
+
+:root {
+
+    --green-dark: #054239;
+
+    --green: #428177;
+
+    --green-light: #eaf4f2;
+
+    --gold: #B9A779;
+
+    --bg: #f6fbfc;
+
+    --white: #ffffff;
+
+    --text: #263238;
+
+    --muted: #778589;
+
+    --border: #e1ebeb;
+
+    --shadow:
+        0 10px 30px rgba(5, 66, 57, 0.08);
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Tajawal", sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    line-height: 1.8;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================
+   EDIT SECTION
+========================= */
+
+.edit-section {
+
+    width: 100%;
+
+    padding: 65px 20px 90px;
+}
+
+
+.edit-container {
+
+    width: min(750px, 100%);
+
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   EDIT CARD
+========================= */
+
+.edit-card {
+
+    width: 100%;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================
+   CARD HEADING
+========================= */
+
+.card-heading {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.card-heading h2 {
+
+    color: var(--green-dark);
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    margin-bottom: 3px;
+}
+
+
+.card-heading p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+/* التخصص */
+
+.form-group.full-width {
+
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+
+    color: var(--green-dark);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   INPUT WRAPPER
+========================= */
+
+.input-wrapper {
+
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.input-wrapper > i {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--green);
+
+    font-size: 16px;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   INPUT + SELECT
+========================= */
+
+.input-wrapper input,
+.input-wrapper select {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #fbfdfd;
+
+    color: var(--text);
+
+    font-family: "Tajawal", sans-serif;
+
+    font-size: 14px;
+
+    padding: 0 45px 0 15px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+.input-wrapper input::placeholder {
+
+    color: #9aa7aa;
+}
+
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+
+    border-color: var(--green);
+
+    background: var(--white);
+
+    box-shadow:
+        0 0 0 3px rgba(66, 129, 119, 0.10);
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.select-wrapper select {
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    cursor: pointer;
+}
+
+
+.select-wrapper::after {
+
+    content: "\f107";
+
+    font-family: "Font Awesome 6 Free";
+
+    font-weight: 900;
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--muted);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-button {
+
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    min-height: 53px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--green-dark);
+
+    color: var(--white);
+
+    font-family: "Tajawal", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 5px;
+
+    transition: 0.3s ease;
+}
+
+
+.save-button i {
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+
+.save-button:hover {
+
+    background: var(--green);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(5, 66, 57, 0.15);
+}
+
+
+.save-button:hover i {
+
+    transform: translateX(-4px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+    .edit-section {
+
+        padding: 45px 15px 60px;
+    }
+
+
+    .edit-container {
+
+        width: 100%;
+    }
+
+
+    .page-heading {
+
+        margin-bottom: 28px;
+    }
+
+
+    .page-heading h1 {
+
+        font-size: 29px;
+    }
+
+
+    .page-heading p {
+
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+
+    .edit-card {
+
+        padding: 20px;
+
+        border-radius: 15px;
+    }
+
+
+    /* العنوان داخل البطاقة */
+
+    .card-heading {
+
+        padding-bottom: 18px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .card-heading h2 {
+
+        font-size: 20px;
+    }
+
+
+    .card-heading p {
+
+        font-size: 12px;
+    }
+
+
+    /* الحقول تحت بعض */
+
+    form {
+
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+    }
+
+
+    .form-group.full-width,
+    .save-button {
+
+        grid-column: auto;
+    }
+
+
+    .form-group {
+
+        gap: 6px;
+    }
+
+
+    .form-group label {
+
+        font-size: 13px;
+    }
+
+
+    .input-wrapper input,
+    .input-wrapper select {
+
+        height: 49px;
+
+        font-size: 13px;
+
+        padding-right: 42px;
+    }
+
+
+    .input-wrapper > i {
+
+        right: 14px;
+
+        font-size: 15px;
+    }
+
+
+    .save-button {
+
+        min-height: 50px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .edit-section {
+
+        padding: 35px 12px 50px;
+    }
+
+
+    .page-heading h1 {
+
+        font-size: 26px;
+    }
+
+
+    .edit-card {
+
+        padding: 17px;
+
+        border-radius: 14px;
+    }
+
+
+    .card-heading h2 {
+
+        font-size: 18px;
+    }
+
+
+    .card-heading p {
+
+        font-size: 11px;
+    }
+
+
+    .input-wrapper input,
+    .input-wrapper select {
+
+        height: 47px;
+
+        font-size: 13px;
+    }
+
+
+    .save-button {
+
+        min-height: 48px;
+    }
+
+}

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تقديم شكوى</title>
+
+    <link rel="stylesheet" href="complaints.css">
+
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+   <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <!-- زر القائمة -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <!-- الشعار -->
+        <a href="index.html" class="logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </a>
+
+        <!-- القائمة -->
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="القائمة الرئيسية">
+
+            <a href="index.html">
+                الرئيسية
+            </a>
+
+            <a href="pharmacy.html">
+                الصيدليات المناوبة
+            </a>
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+        </nav>
+
+        <!-- تسجيل الدخول -->
+         <a
+            href="patient-profile.html"
+            class="user-icon"
+            aria-label="تسجيل الدخول"
+            title="تسجيل الدخول">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+    </header>
+    
+
+    <!-- =========================
+            MAIN
+    ========================== -->
+
+    <main>
+
+        <section class="complaints-section">
+
+            <div class="container">
+
+                <!-- =========================
+                        HEADING
+                ========================== -->
+
+                <div class="complaint-heading">
+
+                    <div class="complaint-icon">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+
+                    <h1 class="section-title">
+                        تقديم شكوى
+                    </h1>
+
+                    <p class="section-description">
+                        يرجى إدخال جميع البيانات المطلوبة.
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                        FORM CARD
+                ========================== -->
+
+                <div class="form-card">
+
+                    <form
+                        id="complaintForm"
+                        enctype="multipart/form-data">
+
+                        <!-- =========================
+                            PERSONAL INFORMATION
+                        ========================== -->
+
+                        <div class="form-section-title">
+
+                            <span></span>
+
+                            <h2>
+                                المعلومات الشخصية
+                            </h2>
+
+                            <span></span>
+
+                        </div>
+
+
+                        <!-- الاسم + الهاتف -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    رقم الهاتف
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="ادخل رقم الهاتف"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    الاسم الكامل
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="مثال: أحمد محمد"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- المدينة + البريد -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="city">
+                                    المدينة
+                                </label>
+
+                                <select
+                                    id="city"
+                                    name="city"
+                                    required>
+
+                                    <option value="">
+                                        اختر المدينة
+                                    </option>
+
+                                    <option value="damascus">
+                                        دمشق
+                                    </option>
+
+                                    <option value="aleppo">
+                                        حلب
+                                    </option>
+
+                                    <option value="homs">
+                                        حمص
+                                    </option>
+
+                                    <option value="hama">
+                                        حماة
+                                    </option>
+
+                                    <option value="latakia">
+                                        اللاذقية
+                                    </option>
+
+                                    <option value="tartous">
+                                        طرطوس
+                                    </option>
+
+                                    <option value="daraa">
+                                        درعا
+                                    </option>
+
+                                    <option value="suwayda">
+                                        السويداء
+                                    </option>
+
+                                    <option value="deir-ezzor">
+                                        دير الزور
+                                    </option>
+
+                                    <option value="raqqa">
+                                        الرقة
+                                    </option>
+
+                                    <option value="idlib">
+                                        إدلب
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    البريد الإلكتروني
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="example@gmail.com"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- القسم + المشفى -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="department">
+                                    القسم
+                                </label>
+
+                                <select
+                                    id="department"
+                                    name="department"
+                                    required>
+
+                                    <option value="">
+                                        اختر القسم
+                                    </option>
+
+                                    <option>
+                                        قسم الباطنية
+                                    </option>
+
+                                    <option>
+                                        قسم الأطفال
+                                    </option>
+
+                                    <option>
+                                        قسم القلب
+                                    </option>
+
+                                    <option>
+                                        قسم الجلدية
+                                    </option>
+
+                                    <option>
+                                        قسم العيون
+                                    </option>
+
+                                    <option>
+                                        قسم الجراحة
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="hospital">
+                                    المشفى
+                                </label>
+
+                                <select
+                                    id="hospital"
+                                    name="hospital"
+                                    required>
+
+                                    <option value="">
+                                        اختر المشفى
+                                    </option>
+
+                                    <option>
+                                        مشفى دمشق
+                                    </option>
+
+                                    <option>
+                                        مشفى الأطفال
+                                    </option>
+
+                                    <option>
+                                        مشفى المواساة
+                                    </option>
+
+                                    <option>
+                                        مشفى الهلال الأحمر
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- التاريخ + الطبيب -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="visitDate">
+                                    تاريخ الزيارة
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="visitDate"
+                                    name="visitDate"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="doctor">
+                                    اسم الدكتور
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="doctor"
+                                    name="doctor"
+                                    placeholder="اكتب اسم الدكتور"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                            تفاصيل الشكوى
+                        ========================== -->
+
+                        <div class="form-group complaint-box">
+
+                            <label for="complaint">
+                                تفاصيل الشكوى
+                            </label>
+
+                            <div class="textarea-wrapper">
+
+                                <textarea
+                                    id="complaint"
+                                    name="complaint"
+                                    placeholder="اشرح شكواك بالتفصيل..."
+                                    required></textarea>
+
+
+                                <!-- =========================
+                                    UPLOAD BUTTONS
+                                ========================== -->
+
+                                <div class="upload-box">
+
+                                    <!-- IMAGE -->
+
+                                    <label
+                                        for="complaintImage"
+                                        class="upload-icon"
+                                        title="إرفاق صورة">
+
+                                        <i class="fa-solid fa-image"></i>
+
+                                    </label>
+
+                                    <input
+                                        type="file"
+                                        id="complaintImage"
+                                        name="complaintImage"
+                                        accept="image/*"
+                                        hidden>
+
+
+                                    <!-- FILE -->
+
+                                    <label
+                                        for="complaintFile"
+                                        class="upload-icon"
+                                        title="إرفاق ملف">
+
+                                        <i class="fa-solid fa-file-pdf"></i>
+
+                                    </label>
+
+                                    <input
+                                        type="file"
+                                        id="complaintFile"
+                                        name="complaintFile"
+                                        accept=".pdf,.doc,.docx"
+                                        hidden>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- SELECTED FILES -->
+
+                            <div
+                                class="selected-files"
+                                id="selectedFiles">
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                            SUBMIT
+                        ========================== -->
+
+                        <button
+                            type="submit"
+                            class="submit-btn">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            إرسال الشكوى
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+<footer>
+
+        <div class="footer-logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </div>
+
+
+        <div class="footer-links">
+
+                      <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="all-questions.html">
+                الأسئلة الشائعة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="about.html">
+                من نحن
+            </a>
+
+
+            <a href="privacy.html">
+                سياسة الخصوصية
+            </a>
+
+
+            <a href="volunteerr.html">
+                شروط التطوع
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <p>
+            جميع الحقوق محفوظة لشركة © 2026
+        </p>
+
+    </footer>
+
+    <!-- =========================
+            JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+            MOBILE MENU
+        ========================== */
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navbar =
+            document.getElementById("navbar");
+
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    navbar.classList.toggle("show");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen ? "true" : "false"
+                );
+
+                menuToggle.innerHTML =
+                    isOpen ? "✕" : "☰";
+
+            }
+        );
+
+
+        /* =========================
+            CLOSE MENU
+        ========================== */
+
+        document
+            .querySelectorAll(".navbar a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navbar.classList.remove("show");
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        menuToggle.innerHTML = "☰";
+
+                    }
+                );
+
+            });
+
+
+        /* =========================
+            FILE UPLOAD
+        ========================== */
+
+        const imageInput =
+            document.getElementById("complaintImage");
+
+        const fileInput =
+            document.getElementById("complaintFile");
+
+        const selectedFiles =
+            document.getElementById("selectedFiles");
+
+
+        function showSelectedFile(file, input) {
+
+            if (!file) {
+                return;
+            }
+
+
+            /* حذف الملف القديم لنفس نوع الإدخال */
+
+            const oldFile =
+                selectedFiles.querySelector(
+                    `[data-input="${input.id}"]`
+                );
+
+            if (oldFile) {
+                oldFile.remove();
+            }
+
+
+            /* صندوق الملف */
+
+            const fileBox =
+                document.createElement("div");
+
+            fileBox.className =
+                "selected-file";
+
+            fileBox.dataset.input =
+                input.id;
+
+
+            /* اسم الملف */
+
+            const fileName =
+                document.createElement("span");
+
+            fileName.innerHTML =
+                `<i class="fa-solid fa-paperclip"></i> ${file.name}`;
+
+
+            /* زر الحذف */
+
+            const removeButton =
+                document.createElement("button");
+
+            removeButton.type =
+                "button";
+
+            removeButton.className =
+                "remove-file";
+
+            removeButton.innerHTML =
+                '<i class="fa-solid fa-xmark"></i>';
+
+
+            removeButton.addEventListener(
+                "click",
+                function () {
+
+                    input.value = "";
+
+                    fileBox.remove();
+
+                }
+            );
+
+
+            fileBox.appendChild(fileName);
+
+            fileBox.appendChild(removeButton);
+
+            selectedFiles.appendChild(fileBox);
+
+        }
+
+
+        /* IMAGE */
+
+        imageInput.addEventListener(
+            "change",
+            function () {
+
+                if (this.files.length > 0) {
+
+                    showSelectedFile(
+                        this.files[0],
+                        this
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* FILE */
+
+        fileInput.addEventListener(
+            "change",
+            function () {
+
+                if (this.files.length > 0) {
+
+                    showSelectedFile(
+                        this.files[0],
+                        this
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+            FORM SUBMIT
+        ========================== */
+
+        document
+            .getElementById("complaintForm")
+            .addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+                    alert(
+                        "تم إرسال الشكوى بنجاح"
+                    );
+
+                    this.reset();
+
+                    selectedFiles.innerHTML = "";
+
+                }
+            );
+
+    </script>
+
+</body>
+
+</html>

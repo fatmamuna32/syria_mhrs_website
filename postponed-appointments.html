@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الأسئلة المكتملة</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="postponed-appointments.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <!-- زر القائمة -->
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="فتح القائمة" aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <!-- الشعار -->
+        <a href="index.html" class="logo">
+
+            <img src="ımage/Ministry-of-Healthlogooo.png" alt="شعار وزارة الصحة">
+
+        </a>
+
+        <!-- القائمة -->
+        <nav class="navbar" id="navbar" aria-label="القائمة الرئيسية">
+
+            <a href="index.html">
+                الرئيسية
+            </a>
+
+            <a href="pharmacy.html">
+                الصيدليات المناوبة
+            </a>
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+        </nav>
+
+        <!-- تسجيل الدخول -->
+       <a
+            href="patient-profile.html"
+            class="user-icon"
+            aria-label="تسجيل الدخول"
+            title="تسجيل الدخول">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+    </header>
+
+    <main>
+        <section class="postponed-section">
+            <div class="postponed-container"> <!-- ========================= PAGE HEADING ========================== -->
+                <div class="page-heading"> <span class="heading-line"></span> <i
+                        class="fa-regular fa-calendar-clock"></i>
+                    <h1> جميع المواعيد المؤجلة </h1>
+                </div> <!-- ========================= APPOINTMENTS LIST ========================== -->
+                <div class="appointments-list">
+                    <!-- ========================= APPOINTMENT CARD 1 ========================== -->
+                    <article class="appointment-card">
+                        <div class="card-top">
+                            <div class="doctor-info">
+                                <div class="doctor-icon"> <i class="fa-solid fa-user-doctor"></i> </div>
+                                <div>
+                                    <h2> د. نور أحمد </h2> <span> طبيبة عيون </span>
+                                </div>
+                            </div>
+                            <div class="status postponed"> <i class="fa-regular fa-clock"></i> مؤجل </div>
+                        </div> <!-- معلومات الموعد -->
+                        <div class="appointment-details">
+                            <div class="detail-item"> <i class="fa-regular fa-calendar"></i>
+                                <div> <span>التاريخ</span> <strong>السبت، 21 أغسطس 2026</strong> </div>
+                            </div>
+                            <div class="detail-item"> <i class="fa-regular fa-clock"></i>
+                                <div> <span>الوقت</span> <strong>10:30 صباحًا</strong> </div>
+                            </div>
+                            <div class="detail-item"> <i class="fa-solid fa-location-dot"></i>
+                                <div> <span>المكان</span> <strong>مركز الرعاية الصحية</strong> </div>
+                            </div>
+                        </div> <!-- سبب التأجيل -->
+                        <div class="postponed-note"> <i class="fa-solid fa-circle-info"></i>
+                            <div> <strong> سبب التأجيل </strong>
+                                <p> تم تأجيل الموعد بناءً على طلب المريض. </p>
+                            </div>
+                            </div> <a href="appointments.html" class="details-btn"> <span> موعد جديد </span>
+                        <i      class="fa-solid fa-arrow-left"></i> </a>
+                    </article> <!-- ========================= APPOINTMENT CARD 2 ========================== -->
+                    <article class="appointment-card">
+                        <div class="card-top">
+                            <div class="doctor-info">
+                                <div class="doctor-icon"> <i class="fa-solid fa-user-doctor"></i> </div>
+                                <div>
+                                    <h2> د. محمد خالد </h2> <span> طبيب باطني </span>
+                                </div>
+                            </div>
+                            <div class="status postponed"> <i class="fa-regular fa-clock"></i> مؤجل </div>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="detail-item"> <i class="fa-regular fa-calendar"></i>
+                                <div> <span>التاريخ</span> <strong>الأحد، 23 أغسطس 2026</strong> </div>
+                            </div>
+                            <div class="detail-item"> <i class="fa-regular fa-clock"></i>
+                                <div> <span>الوقت</span> <strong>11:00 صباحًا</strong> </div>
+                            </div>
+                            <div class="detail-item"> <i class="fa-solid fa-location-dot"></i>
+                                <div> <span>المكان</span> <strong>مركز الرعاية الصحية</strong> </div>
+                            </div>
+                        </div>
+                        <div class="postponed-note"> <i class="fa-solid fa-circle-info"></i>
+                            <div> <strong> سبب التأجيل </strong>
+                                <p> تم تأجيل الموعد لعدم توفر الطبيب في الموعد المحدد. </p>
+                            </div>
+                         </div> <a href="appointments.html" class="details-btn"> <span> موعد جديد </span>
+                        <i      class="fa-solid fa-arrow-left"></i> </a>
+                    </article> <!-- ========================= APPOINTMENT CARD 3 ========================== -->
+                    <article class="appointment-card">
+                        <div class="card-top">
+                            <div class="doctor-info">
+                                <div class="doctor-icon"> <i class="fa-solid fa-user-doctor"></i> </div>
+                                <div>
+                                    <h2> د. سارة محمود </h2> <span> طبيبة جلدية </span>
+                                </div>
+                            </div>
+                            <div class="status postponed"> <i class="fa-regular fa-clock"></i> مؤجل </div>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="detail-item"> <i class="fa-regular fa-calendar"></i>
+                                <div> <span>التاريخ</span> <strong>الثلاثاء، 25 أغسطس 2026</strong> </div>
+                            </div>
+                            <div class="detail-item"> <i class="fa-regular fa-clock"></i>
+                                <div> <span>الوقت</span> <strong>02:00 ظهرًا</strong> </div>
+                            </div>
+                            <div class="detail-item"> <i class="fa-solid fa-location-dot"></i>
+                                <div> <span>المكان</span> <strong>العيادة الطبية</strong> </div>
+                            </div>
+                        </div>
+                        <div class="postponed-note"> <i class="fa-solid fa-circle-info"></i>
+                            <div> <strong> سبب التأجيل </strong>
+                                <p> تم تأجيل الموعد إلى موعد آخر بناءً على طلب الطبيب. </p>
+                            </div>
+                          </div> <a href="appointments.html" class="details-btn"> <span> موعد جديد </span>
+                        <i      class="fa-solid fa-arrow-left"></i> </a>
+                    </article> <!-- ========================= APPOINTMENT CARD 4 ========================== -->
+                    <article class="appointment-card">
+                        <div class="card-top">
+                            <div class="doctor-info">
+                                <div class="doctor-icon"> <i class="fa-solid fa-user-doctor"></i> </div>
+                                <div>
+                                    <h2> د. أحمد علي </h2> <span> طبيب عظام </span>
+                                </div>
+                            </div>
+                            <div class="status postponed"> <i class="fa-regular fa-clock"></i> مؤجل </div>
+                        </div>
+                        <div class="appointment-details">
+                            <div class="detail-item"> <i class="fa-regular fa-calendar"></i>
+                                <div> <span>التاريخ</span> <strong>الخميس، 27 أغسطس 2026</strong> </div>
+                            </div>
+                            <div class="detail-item"> <i class="fa-regular fa-clock"></i>
+                                <div> <span>الوقت</span> <strong>09:30 صباحًا</strong> </div>
+                            </div>
+                            <div class="detail-item"> <i class="fa-solid fa-location-dot"></i>
+                                <div> <span>المكان</span> <strong>مركز الرعاية الصحية</strong> </div>
+                            </div>
+                        </div>
+                        <div class="postponed-note"> <i class="fa-solid fa-circle-info"></i>
+                            <div> <strong> سبب التأجيل </strong>
+                                <p> تم تأجيل الموعد بسبب تغيير جدول العيادة. </p>
+                            </div>
+                        </div> <a href="appointments.html" class="details-btn"> <span> موعد جديد </span>
+                        <i      class="fa-solid fa-arrow-left"></i> </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+   <!-- ================= FOOTER ================= -->
+<footer>
+
+        <div class="footer-logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </div>
+
+   
+
+
+
+        <div class="footer-links">
+
+
+          <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="all-questions.html">
+                الأسئلة الشائعة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="about.html">
+                من نحن
+            </a>
+
+
+            <a href="privacy.html">
+                سياسة الخصوصية
+            </a>
+
+
+            <a href="volunteerr.html">
+                شروط التطوع
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+
+        </div>
+
+        <hr>
+
+
+        <p>
+            جميع الحقوق محفوظة لشركة © 2026
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

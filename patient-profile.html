@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>الملف الشخصي للمريض</title>
+
+    <link
+        rel="stylesheet"
+        href="patient-profile.css">
+
+    <link
+        rel="stylesheet"
+        href="header.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="site-header">
+
+
+        <!-- زر القائمة -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- الشعار -->
+
+        <a
+            href="index.html"
+            class="logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </a>
+
+
+        <!-- القائمة -->
+
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="القائمة الرئيسية">
+
+
+            <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="pharmacy.html">
+                الصيدليات المناوبة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+        </nav>
+
+
+        <!-- تسجيل الدخول -->
+
+        <a
+            href="patient-profile.html"
+            class="user-icon"
+            aria-label="تسجيل الدخول"
+            title="تسجيل الدخول">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main>
+
+        <section class="profile-section">
+
+            <div class="profile-container">
+
+
+                <!-- =========================
+                     PAGE HEADING
+                ========================= -->
+
+                <div class="page-heading">
+
+                    <span class="heading-line"></span>
+
+                    <h1>
+                        معلوماتي الشخصية
+                    </h1>
+
+                </div>
+
+
+
+                <!-- =========================
+                     PERSONAL INFORMATION
+                ========================= -->
+
+                <section class="profile-card">
+
+
+                    <div class="profile-top">
+
+
+                        <div class="profile-avatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="profile-name">
+
+                            <h2 id="profileName">
+                                سارة احمد
+                            </h2>
+
+                            <span>
+                                مريض
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="personal-info">
+
+
+                        <!-- المدينة -->
+
+                        <div class="info-item">
+
+                            <div class="info-icon">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    المدينة
+                                </span>
+
+                                <strong id="profileCity">
+                                    دمشق | سوريا
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- العمر -->
+
+                        <div class="info-item">
+
+                            <div class="info-icon">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    العمر
+                                </span>
+
+                                <strong id="profileAge">
+                                    45
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- رقم الهاتف -->
+
+                        <div class="info-item">
+
+                            <div class="info-icon">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    رقم الهاتف
+                                </span>
+
+                                <strong id="profilePhone">
+                                    09XXXXXXXX
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- زر التعديل -->
+
+                    <button
+                        class="edit-profile"
+                        id="editProfileBtn"
+                        type="button">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        تعديل المعلومات الشخصية
+
+                    </button>
+
+
+                </section>
+
+
+
+                <!-- =========================
+                     EDIT PROFILE
+                ========================= -->
+
+                <section
+                    class="edit-profile-card"
+                    id="editProfileCard">
+
+
+                    <div class="edit-profile-heading">
+
+                        <span class="heading-line"></span>
+
+                        <h2>
+                            تعديل المعلومات الشخصية
+                        </h2>
+
+                    </div>
+
+
+
+                    <form id="profileForm">
+
+
+                        <!-- الاسم -->
+
+                        <div class="form-group">
+
+                            <label for="editName">
+                                الاسم الكامل
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="editName"
+                                    placeholder="أدخل الاسم الكامل"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- المدينة -->
+
+                        <div class="form-group">
+
+                            <label for="editCity">
+                                المدينة
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                <select
+                                    id="editCity"
+                                    required>
+
+                                    <option value="">
+                                        اختر المدينة
+                                    </option>
+
+                                    <option value="دمشق | سوريا">
+                                        دمشق | سوريا
+                                    </option>
+
+                                    <option value="حلب | سوريا">
+                                        حلب | سوريا
+                                    </option>
+
+                                    <option value="حمص | سوريا">
+                                        حمص | سوريا
+                                    </option>
+
+                                    <option value="حماة | سوريا">
+                                        حماة | سوريا
+                                    </option>
+
+                                    <option value="اللاذقية | سوريا">
+                                        اللاذقية | سوريا
+                                    </option>
+
+                                    <option value="طرطوس | سوريا">
+                                        طرطوس | سوريا
+                                    </option>
+
+                                    <option value="إدلب | سوريا">
+                                        إدلب | سوريا
+                                    </option>
+
+                                    <option value="درعا | سوريا">
+                                        درعا | سوريا
+                                    </option>
+
+                                    <option value="دير الزور | سوريا">
+                                        دير الزور | سوريا
+                                    </option>
+
+                                    <option value="الرقة | سوريا">
+                                        الرقة | سوريا
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- العمر -->
+
+                        <div class="form-group">
+
+                            <label for="editAge">
+                                العمر
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                                <input
+                                    type="number"
+                                    id="editAge"
+                                    min="1"
+                                    max="120"
+                                    placeholder="أدخل العمر"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- الهاتف -->
+
+                        <div class="form-group">
+
+                            <label for="editPhone">
+                                رقم الهاتف
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="editPhone"
+                                    placeholder="أدخل رقم الهاتف"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- الأزرار -->
+
+                        <div class="edit-buttons">
+
+
+                            <button
+                                type="submit"
+                                class="save-profile">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                حفظ التعديلات
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="cancel-profile"
+                                id="cancelProfileBtn">
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                                إلغاء
+
+                            </button>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </section>
+
+
+
+                <!-- =========================
+                     ALL QUESTIONS
+                ========================= -->
+
+                <section class="dashboard-section">
+
+
+                    <div class="section-title">
+
+                        <h2>
+                            جميع الأسئلة
+                        </h2>
+
+                        <span class="section-count">
+                            2
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="questions-list">
+
+
+                        <!-- Question 1 -->
+
+                        <article class="question-card answered">
+
+
+                            <div class="question-header">
+
+                                <span class="question-label">
+                                    السؤال
+                                </span>
+
+                                <span class="question-status">
+                                    تمت الإجابة
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                أشعر بألم داخل العين
+                                وانزعاج شديد عند التعرض
+                                للضوء ما السبب؟
+                            </h3>
+
+
+                            <div class="answer">
+
+                                <strong>
+                                    الجواب
+                                </strong>
+
+                                <p>
+                                    يرجى مراجعة الطبيب المختص للحصول على
+                                    التشخيص المناسب والإجابة الطبية الدقيقة.
+                                </p>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- Question 2 -->
+
+                        <article class="question-card answered">
+
+
+                            <div class="question-header">
+
+                                <span class="question-label">
+                                    السؤال
+                                </span>
+
+                                <span class="question-status">
+                                    تمت الإجابة
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                أشعر بألم داخل العين
+                                وانزعاج شديد عند التعرض
+                                للضوء ما السبب؟
+                            </h3>
+
+
+                            <div class="answer">
+
+                                <strong>
+                                    الجواب
+                                </strong>
+
+                                <p>
+                                    يرجى مراجعة الطبيب المختص للحصول على
+                                    التشخيص المناسب والإجابة الطبية الدقيقة.
+                                </p>
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =========================
+                     PENDING QUESTIONS
+                ========================= -->
+
+                <section class="dashboard-section">
+
+
+                    <div class="section-title">
+
+                        <h2>
+                            الأسئلة على قيد الانتظار
+                        </h2>
+
+                        <span class="section-count pending-count">
+                            2
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="questions-list">
+
+
+                        <!-- Pending Question 1 -->
+
+                        <article class="question-card pending">
+
+
+                            <div class="question-header">
+
+                                <span class="question-label">
+                                    السؤال
+                                </span>
+
+                                <span class="question-status">
+                                    قيد الانتظار
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                أشعر بألم داخل العين
+                                وانزعاج شديد عند التعرض
+                                للضوء ما السبب؟
+                            </h3>
+
+
+                        </article>
+
+
+
+                        <!-- Pending Question 2 -->
+
+                        <article class="question-card pending">
+
+
+                            <div class="question-header">
+
+                                <span class="question-label">
+                                    السؤال
+                                </span>
+
+                                <span class="question-status">
+                                    قيد الانتظار
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                أشعر بألم داخل العين
+                                وانزعاج شديد عند التعرض
+                                للضوء ما السبب؟
+                            </h3>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =========================
+                     APPOINTMENTS
+                ========================= -->
+
+                <section class="dashboard-section">
+
+
+                    <div class="section-title">
+
+                        <h2>
+                            مواعيدي
+                        </h2>
+
+                        <span class="section-count">
+                            3
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="appointments-list">
+
+
+                        <!-- Appointment 1 -->
+
+                        <article class="appointment-card">
+
+
+                            <div class="appointment-date">
+
+                                <strong>
+                                    21
+                                </strong>
+
+                                <span>
+                                    أغسطس 2026
+                                </span>
+
+                            </div>
+
+
+                            <div class="appointment-info">
+
+                                <div class="doctor-name">
+
+                                    <i class="fa-solid fa-user-doctor"></i>
+
+                                    <strong>
+                                        د. نور احمد
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="specialty">
+                                    اختصاص العيون
+                                </span>
+
+
+                                <span class="session-duration">
+                                    مدة الجلسة : 20 د
+                                </span>
+
+                            </div>
+
+
+                            <div class="appointment-time">
+
+                                <strong>
+                                    10:30
+                                </strong>
+
+                                <span>
+                                    السبت
+                                </span>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- Appointment 2 -->
+
+                        <article class="appointment-card">
+
+
+                            <div class="appointment-date">
+
+                                <strong>
+                                    21
+                                </strong>
+
+                                <span>
+                                    أغسطس 2026
+                                </span>
+
+                            </div>
+
+
+                            <div class="appointment-info">
+
+                                <div class="doctor-name">
+
+                                    <i class="fa-solid fa-user-doctor"></i>
+
+                                    <strong>
+                                        د. نور احمد
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="specialty">
+                                    اختصاص العيون
+                                </span>
+
+
+                                <span class="session-duration">
+                                    مدة الجلسة : 20 د
+                                </span>
+
+                            </div>
+
+
+                            <div class="appointment-time">
+
+                                <strong>
+                                    10:30
+                                </strong>
+
+                                <span>
+                                    السبت
+                                </span>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- Appointment 3 -->
+
+                        <article class="appointment-card">
+
+
+                            <div class="appointment-date">
+
+                                <strong>
+                                    21
+                                </strong>
+
+                                <span>
+                                    أغسطس 2026
+                                </span>
+
+                            </div>
+
+
+                            <div class="appointment-info">
+
+                                <div class="doctor-name">
+
+                                    <i class="fa-solid fa-user-doctor"></i>
+
+                                    <strong>
+                                        د. نور احمد
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="specialty">
+                                    اختصاص العيون
+                                </span>
+
+
+                                <span class="session-duration">
+                                    مدة الجلسة : 20 د
+                                </span>
+
+                            </div>
+
+
+                            <div class="appointment-time">
+
+                                <strong>
+                                    10:30
+                                </strong>
+
+                                <span>
+                                    السبت
+                                </span>
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+
+            <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="all-questions.html">
+                الأسئلة الشائعة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="about.html">
+                من نحن
+            </a>
+
+
+            <a href="privacy.html">
+                سياسة الخصوصية
+            </a>
+
+
+            <a href="volunteerr.html">
+                شروط التطوع
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <p>
+            جميع الحقوق محفوظة لشركة © 2026
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navbar =
+            document.getElementById("navbar");
+
+
+        if (menuToggle && navbar) {
+
+
+            menuToggle.addEventListener(
+                "click",
+                function (e) {
+
+                    e.stopPropagation();
+
+                    navbar.classList.toggle("active");
+
+
+                    const isOpen =
+                        navbar.classList.contains("active");
+
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        isOpen ? "true" : "false"
+                    );
+
+
+                    menuToggle.innerHTML =
+                        isOpen
+                            ? '<i class="fa-solid fa-xmark"></i>'
+                            : '<i class="fa-solid fa-bars"></i>';
+
+                }
+            );
+
+
+            navbar.querySelectorAll("a")
+                .forEach(function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            navbar.classList.remove("active");
+
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                            menuToggle.innerHTML =
+                                '<i class="fa-solid fa-bars"></i>';
+
+                        }
+                    );
+
+                });
+
+
+            document.addEventListener(
+                "click",
+                function (e) {
+
+                    if (
+                        !navbar.contains(e.target) &&
+                        !menuToggle.contains(e.target)
+                    ) {
+
+                        navbar.classList.remove("active");
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        menuToggle.innerHTML =
+                            '<i class="fa-solid fa-bars"></i>';
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* =========================
+           EDIT PROFILE
+        ========================= */
+
+        const editProfileBtn =
+            document.getElementById("editProfileBtn");
+
+        const editProfileCard =
+            document.getElementById("editProfileCard");
+
+        const cancelProfileBtn =
+            document.getElementById("cancelProfileBtn");
+
+        const profileForm =
+            document.getElementById("profileForm");
+
+
+        const profileName =
+            document.getElementById("profileName");
+
+        const profileCity =
+            document.getElementById("profileCity");
+
+        const profileAge =
+            document.getElementById("profileAge");
+
+        const profilePhone =
+            document.getElementById("profilePhone");
+
+
+        const editName =
+            document.getElementById("editName");
+
+        const editCity =
+            document.getElementById("editCity");
+
+        const editAge =
+            document.getElementById("editAge");
+
+        const editPhone =
+            document.getElementById("editPhone");
+
+
+
+        /* =========================
+           LOAD SAVED DATA
+        ========================= */
+
+        const savedName =
+            localStorage.getItem("patientName");
+
+        const savedCity =
+            localStorage.getItem("patientCity");
+
+        const savedAge =
+            localStorage.getItem("patientAge");
+
+        const savedPhone =
+            localStorage.getItem("patientPhone");
+
+
+        if (savedName) {
+
+            profileName.textContent =
+                savedName;
+
+        }
+
+
+        if (savedCity) {
+
+            profileCity.textContent =
+                savedCity;
+
+        }
+
+
+        if (savedAge) {
+
+            profileAge.textContent =
+                savedAge;
+
+        }
+
+
+        if (savedPhone) {
+
+            profilePhone.textContent =
+                savedPhone;
+
+        }
+
+
+
+        /* =========================
+           OPEN EDIT FORM
+        ========================= */
+
+        editProfileBtn.addEventListener(
+            "click",
+            function () {
+
+
+                editName.value =
+                    profileName.textContent.trim();
+
+
+                editCity.value =
+                    profileCity.textContent.trim();
+
+
+                editAge.value =
+                    profileAge.textContent.trim();
+
+
+                editPhone.value =
+                    profilePhone.textContent.trim();
+
+
+                editProfileCard.style.display =
+                    "block";
+
+
+                editProfileCard.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+
+            }
+        );
+
+
+
+        /* =========================
+           CANCEL
+        ========================= */
+
+        cancelProfileBtn.addEventListener(
+            "click",
+            function () {
+
+                editProfileCard.style.display =
+                    "none";
+
+            }
+        );
+
+
+
+        /* =========================
+           SAVE
+        ========================= */
+
+        profileForm.addEventListener(
+            "submit",
+            function (e) {
+
+                e.preventDefault();
+
+
+                const newName =
+                    editName.value.trim();
+
+                const newCity =
+                    editCity.value;
+
+                const newAge =
+                    editAge.value.trim();
+
+                const newPhone =
+                    editPhone.value.trim();
+
+
+                if (
+                    !newName ||
+                    !newCity ||
+                    !newAge ||
+                    !newPhone
+                ) {
+
+                    return;
+
+                }
+
+
+                /* تحديث المعلومات */
+
+                profileName.textContent =
+                    newName;
+
+                profileCity.textContent =
+                    newCity;
+
+                profileAge.textContent =
+                    newAge;
+
+                profilePhone.textContent =
+                    newPhone;
+
+
+
+                /* حفظ المعلومات */
+
+                localStorage.setItem(
+                    "patientName",
+                    newName
+                );
+
+                localStorage.setItem(
+                    "patientCity",
+                    newCity
+                );
+
+                localStorage.setItem(
+                    "patientAge",
+                    newAge
+                );
+
+                localStorage.setItem(
+                    "patientPhone",
+                    newPhone
+                );
+
+
+
+                /* إخفاء نموذج التعديل */
+
+                editProfileCard.style.display =
+                    "none";
+
+
+                /* الرجوع إلى بطاقة المعلومات */
+
+                document.querySelector(
+                    ".profile-card"
+                ).scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+
+            }
+        );
+
+
+    });
+
+    </script>
+
+
+</body>
+
+</html>

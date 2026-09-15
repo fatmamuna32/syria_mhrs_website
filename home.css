@@ -1,0 +1,1398 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+:root {
+    --green-dark: #054239;
+    --green: #428177;
+    --gold: #B9A779;
+    --bg: #f6fbfc;
+    --text: #263238;
+    --muted: #778589;
+    --border: #e2ebed;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Tajawal", Arial, Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+
+/* =========================================================
+   BIG HEARTBEAT
+========================================================= */
+
+.heartbeat {
+    width: 90%;
+    max-width: 1200px;
+
+    height: 180px;
+
+    margin: 35px auto;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   SVG
+========================================================= */
+
+.heartbeat svg {
+    width: 200%;
+    height: 100%;
+
+    display: block;
+
+    animation: heartbeatMove 3s linear infinite;
+}
+
+
+/* =========================================================
+   HEARTBEAT LINE
+========================================================= */
+
+.heartbeat polyline {
+    fill: none;
+
+    stroke: #428177;
+
+    stroke-width: 5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    filter: drop-shadow(0 0 4px rgba(66, 129, 119, .25));
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes heartbeatMove {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .heartbeat {
+        width: 95%;
+
+        height: 120px;
+
+        margin: 25px auto;
+    }
+
+    .heartbeat polyline {
+        stroke-width: 4;
+    }
+
+}
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    width: 100%;
+    min-height: 570px;
+    height: 75vh;
+
+    background-image: url("ımage/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 5%;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.section {
+    padding: 75px 0;
+    background: #fff;
+}
+
+.container {
+    width: min(90%, 1000px);
+    margin: auto;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+    text-align: center;
+
+    color: var(--green-dark);
+
+    font-size: 31px;
+    font-weight: 800;
+
+    margin-bottom: 7px;
+}
+
+.section-title::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin: 10px auto 12px;
+
+    background: var(--gold);
+
+    border-radius: 10px;
+}
+
+.section-description {
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.form-card {
+    width: 100%;
+    max-width: 850px;
+
+    margin: auto;
+
+    background: var(--green);
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    border: 1px solid #edf2f2;
+
+    box-shadow:
+        0 5px 30px rgba(0, 0, 0, .07);
+}
+
+
+/* =========================================================
+   FORM TITLE
+========================================================= */
+
+.form-card h3 {
+    color: #fff;
+
+    text-align: center;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.title-line {
+    border: none;
+
+    border-top:
+        1px solid rgba(255, 255, 255, .35);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    min-height: 46px;
+
+    border: 1px solid #d8e3e5;
+
+    border-radius: 8px;
+
+    padding: 12px 14px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: var(--text);
+
+    transition: .25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa8aa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 3px rgba(185, 167, 121, .15);
+}
+
+
+/* =========================================================
+   COMPLAINT
+========================================================= */
+
+.complaint-box {
+    width: 100%;
+}
+
+.complaint-box > label {
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.textarea-wrapper {
+    width: 100%;
+
+    background: #fff;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    border: 1px solid #d8e3e5;
+}
+
+.textarea-wrapper textarea {
+    width: 100%;
+
+    min-height: 180px;
+
+    display: block;
+
+    border: none;
+    outline: none;
+
+    resize: vertical;
+
+    padding: 15px;
+
+    color: var(--text);
+
+    background: #fff;
+
+    direction: rtl;
+
+    text-align: right;
+}
+
+.textarea-wrapper textarea:focus {
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   UPLOAD BOX
+========================================================= */
+
+.upload-box {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    direction: ltr;
+
+    gap: 8px;
+
+    padding: 10px;
+
+    border-top:
+        1px solid #e2ebed;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   UPLOAD ICON
+========================================================= */
+
+.upload-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f8f8;
+
+    color: var(--green-dark);
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.upload-icon:hover {
+    background: #e7f1ef;
+}
+
+
+/* =========================================================
+   SELECTED FILES
+========================================================= */
+
+.selected-files {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-top: 8px;
+}
+
+.selected-file {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 8px 10px;
+
+    background: #f6f9f9;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    color: var(--text);
+}
+
+.selected-file span {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: var(--text);
+
+    direction: rtl;
+
+    text-align: right;
+}
+
+.remove-file {
+    border: none;
+
+    background: #b85c5c;
+
+    color: #fff;
+
+    padding: 4px 9px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    flex-shrink: 0;
+
+    transition: .2s ease;
+}
+
+.remove-file:hover {
+    background: #9e4949;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.submit-btn {
+    width: 100%;
+    min-height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--green-dark);
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: .3s ease;
+
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.submit-btn i {
+    margin-left: 0;
+}
+
+.submit-btn:hover {
+    background: #a89567;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+/* القسم كامل أبيض */
+.faq-section {
+    width: 100%;
+
+    padding: 0;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   FAQ HEADER
+   أبيض
+========================================================= */
+
+.faq-container {
+    width: min(90%, 850px);
+
+    margin: 0 auto;
+
+    padding-top: 75px;
+    padding-bottom: 40px;
+
+    background: #fff;
+
+    text-align: center;
+}
+
+.faq-container .section-title {
+    background: #fff;
+
+    color: var(--green-dark);
+
+    margin-bottom: 7px;
+}
+
+.faq-container .section-description {
+    background: #fff;
+
+    color: var(--muted);
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FAQ GREEN AREA
+   أخضر غامق بعرض الصفحة
+========================================================= */
+
+.faq-list {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 45px 20px 55px;
+
+    background: var(--green-dark);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   FAQ ITEM
+   داخل المنطقة الخضراء
+========================================================= */
+
+.faq-item {
+    width: min(90%, 850px);
+
+    margin: 0 auto 12px;
+
+    padding: 0;
+
+    background: var(--green);
+
+    border: none;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FAQ QUESTION
+   أبيض
+========================================================= */
+
+.faq-question {
+    width: 100%;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 12px 18px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    color: var(--green-dark);
+
+    text-align: right;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.faq-question span {
+    flex: 1;
+
+    color: var(--green-dark);
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   PLUS
+========================================================= */
+
+.faq-question b {
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e7f1ef;
+
+    color: var(--green-dark);
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    transition: .3s ease;
+}
+
+.faq-item.active .faq-question b {
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   FAQ ANSWER
+   أخضر غامق
+========================================================= */
+
+.faq-answer {
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 18px;
+
+    background: var(--green-dark);
+
+    color: #fff;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    transition:
+        max-height .3s ease,
+        padding .3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+
+    padding: 15px 18px 18px;
+
+    background: var(--green);
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .site-header {
+        min-height: 70px;
+
+        padding: 8px 5%;
+
+        gap: 15px;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .logo img {
+        width: 85px;
+        height: 52px;
+    }
+
+    .login {
+        padding: 7px 12px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+
+    .site-header {
+        position: relative;
+
+        width: 100%;
+
+        height: 70px;
+        min-height: 70px;
+
+        padding: 8px 4%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 0;
+    }
+
+
+    /* القائمة */
+
+    .menu-icon {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        margin: 0;
+        padding: 0;
+
+        font-size: 25px;
+
+        line-height: 1;
+
+        z-index: 1002;
+    }
+
+
+    /* اللوغو */
+
+    .logo {
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        transform:
+            translate(-50%, -50%);
+
+        width: auto;
+
+        margin: 0;
+        padding: 0;
+
+        z-index: 1001;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 52px;
+
+        object-fit: contain;
+    }
+
+
+    /* تسجيل الدخول */
+
+    .login {
+        margin: 0;
+
+        padding: 7px 12px;
+
+        font-size: 12px;
+
+        z-index: 1002;
+    }
+
+
+    /* القائمة المنسدلة */
+
+    .navbar {
+        position: absolute;
+
+        top: 70px;
+
+        right: 0;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: #fff;
+
+        border-top:
+            1px solid #e5eeee;
+
+        border-bottom:
+            1px solid #e5eeee;
+
+        padding: 5px 0 0;
+
+        box-shadow:
+            0 8px 20px rgba(0, 0, 0, .08);
+
+        z-index: 1000;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .navbar a {
+        width: 100%;
+
+        padding: 12px 15px;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        color: var(--green-dark);
+
+        text-align: right;
+
+        border-bottom:
+            1px solid #eef3f3;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+        color: var(--gold);
+
+        background: #f8fbfa;
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 400px;
+
+        height: 60vh;
+
+        background-position: center;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .section-description {
+        font-size: 14px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* FORM */
+
+    .form-card {
+        padding: 22px 15px;
+
+        border-radius: 14px;
+    }
+
+    .form-card h3 {
+        font-size: 17px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group select {
+        min-height: 46px;
+
+        font-size: 13px;
+    }
+
+    .complaint-box > label {
+        font-size: 13px;
+    }
+
+    .textarea-wrapper textarea {
+        min-height: 155px;
+
+        font-size: 13px;
+    }
+
+
+    /* رفع الملفات */
+
+    .upload-box {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        direction: ltr;
+
+        gap: 7px;
+
+        padding: 9px;
+    }
+
+    .upload-icon {
+        width: 34px;
+        height: 34px;
+
+        font-size: 15px;
+    }
+
+
+    /* SUBMIT */
+
+    .submit-btn {
+        min-height: 47px;
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       FAQ MOBILE
+    ===================================================== */
+
+    .faq-container {
+        width: 90%;
+
+        padding-top: 55px;
+
+        padding-bottom: 30px;
+    }
+
+
+    /* الأخضر بعرض الشاشة */
+
+    .faq-list {
+        width: 100%;
+
+        padding: 35px 12px 45px;
+
+        background-color: var(--green);
+    }
+
+
+    /* الأسئلة */
+
+    .faq-item {
+        width: 92%;
+
+        margin-bottom: 10px;
+
+        background-color: var(--green);
+    }
+
+
+    /* السؤال أبيض */
+
+    .faq-question {
+        min-height: 55px;
+
+        padding: 11px 13px;
+
+        background: #fff;
+
+        color: var(--green-dark);
+
+        font-size: 13px;
+    }
+
+    .faq-question span {
+        color: var(--green-dark);
+    }
+
+
+    /* علامة + */
+
+    .faq-question b {
+        width: 27px;
+        height: 27px;
+
+        background: #e7f1ef;
+
+        color: var(--green-dark);
+
+        font-size: 19px;
+    }
+
+
+    /* الجواب أخضر */
+
+    .faq-answer {
+           background-color: var(--green);
+
+        color: #fff;
+
+        font-size: 12px;
+    }
+
+    .faq-item.active .faq-answer {
+          background-color: var(--green);
+
+        color: #fff;
+
+        padding: 13px 13px 16px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px 15px;
+    }
+
+    .footer-logo img {
+        width: 180px;
+        height: 70px;
+    }
+
+    .footer-links {
+        gap: 10px 14px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .site-header {
+        height: 68px;
+        min-height: 68px;
+
+        padding: 8px 4%;
+    }
+
+    .menu-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 24px;
+    }
+
+    .logo img {
+        width: 74px;
+        height: 48px;
+    }
+
+    .login {
+        padding: 6px 9px;
+
+        font-size: 11px;
+    }
+
+    .navbar {
+        top: 68px;
+    }
+
+    .navbar a {
+        padding: 11px 14px;
+
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 400px;
+
+        height: 60vh;
+    }
+
+    .form-card {
+        padding: 20px 14px;
+    }
+
+    .upload-box {
+        justify-content: flex-start;
+
+        direction: ltr;
+
+        gap: 7px;
+    }
+
+
+    /* FAQ */
+
+    .faq-container {
+        width: 92%;
+    }
+
+    .faq-list {
+        width: 100%;
+
+        padding:
+            30px 8px 40px;
+    }
+
+    .faq-item {
+        width: 94%;
+    }
+
+    .faq-question {
+        min-height: 54px;
+
+        padding: 10px 12px;
+
+        font-size: 12px;
+    }
+
+    .faq-question b {
+        width: 27px;
+        height: 27px;
+
+        font-size: 19px;
+    }
+
+    .faq-answer {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+    .faq-item.active .faq-answer {
+        padding:
+            12px 12px 15px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-logo img {
+        width: 170px;
+        height: 65px;
+    }
+
+    .footer-links {
+        gap: 8px 12px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .site-header {
+        height: 65px;
+        min-height: 65px;
+
+        padding: 7px 3%;
+    }
+
+    .menu-icon {
+        width: 37px;
+        height: 37px;
+
+        font-size: 22px;
+    }
+
+    .logo img {
+        width: 67px;
+        height: 44px;
+    }
+
+    .login {
+        padding: 5px 7px;
+
+        font-size: 10px;
+    }
+
+    .navbar {
+        top: 65px;
+    }
+
+    .navbar a {
+        padding: 10px 13px;
+
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .form-card {
+        padding: 17px 11px;
+    }
+
+    .upload-box {
+        justify-content: flex-start;
+
+        direction: ltr;
+    }
+
+
+    /* FAQ */
+
+    .faq-list {
+        padding:
+            28px 5px 35px;
+    }
+
+    .faq-item {
+        width: 95%;
+
+    }
+
+    .faq-question {
+        padding:
+            10px 11px;
+
+        font-size: 11px;
+    }
+
+    .faq-question b {
+        width: 25px;
+        height: 25px;
+
+        font-size: 18px;
+    }
+
+    .faq-answer {
+        font-size: 11px;
+    }
+}

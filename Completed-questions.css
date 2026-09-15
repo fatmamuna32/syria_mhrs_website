@@ -1,0 +1,674 @@
+/* =========================
+   ROOT
+========================= */
+
+:root {
+    --green-dark: #054239;
+    --green: #428177;
+    --green-light: #eaf4f2;
+
+    --gold: #B9A779;
+
+    --bg: #f6fbfc;
+    --white: #ffffff;
+
+    --text: #263238;
+    --muted: #778589;
+
+    --border: #e1ebeb;
+
+    --shadow:
+        0 10px 30px rgba(5, 66, 57, 0.08);
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Tajawal", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.answered-section {
+    width: 100%;
+    padding: 50px 20px 80px;
+}
+
+.answered-container {
+    width: min(950px, 100%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.page-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   HEADING ICON
+========================= */
+
+.page-heading i {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--green-light);
+
+    color: var(--green-dark);
+
+    border-radius: 12px;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.page-heading h1 {
+    margin: 0;
+
+    color: var(--green-dark);
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   QUESTIONS LIST
+========================= */
+
+.answered-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 380px);
+
+    justify-content: center;
+
+    gap: 16px;
+}
+
+
+/* =========================
+   QUESTION CARD
+========================= */
+
+.answered-card {
+    width: 380px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s ease;
+}
+
+.answered-card:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(66, 129, 119, 0.35);
+
+    box-shadow:
+        0 14px 30px
+        rgba(5, 66, 57, 0.11);
+}
+
+
+/* =========================
+   CARD TOP
+========================= */
+
+.card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-bottom: 12px;
+
+    margin-bottom: 12px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+/* =========================
+   PATIENT INFO
+========================= */
+
+.patient-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   PATIENT ICON
+========================= */
+
+.patient-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: var(--green-light);
+
+    color: var(--green);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   PATIENT NAME
+========================= */
+
+.patient-info h2 {
+    color: var(--green-dark);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TIME
+========================= */
+
+.patient-info span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    background: #fff8e8;
+
+    color: #9a7a2f;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+}
+
+.status i {
+    color: var(--gold);
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   QUESTION PREVIEW
+========================= */
+
+.question-preview {
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   QUESTION TITLE
+========================= */
+
+.question-title {
+    display: block;
+
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   QUESTION TEXT
+========================= */
+
+.question-preview p {
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   DETAILS BUTTON
+========================= */
+
+.details-btn {
+    width: 100%;
+
+    min-height: 39px;
+
+    border-radius: 9px;
+
+    background: var(--green);
+
+    color: var(--white);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.details-btn:hover {
+    background: var(--green-dark);
+
+    transform: translateY(-2px);
+}
+
+.details-btn i {
+    font-size: 11px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .answered-section {
+        padding: 45px 20px 70px;
+    }
+
+    .answered-container {
+        width: min(600px, 100%);
+    }
+
+    .answered-list {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        gap: 16px;
+    }
+
+    .answered-card {
+        width: min(500px, 100%);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .answered-section {
+        padding: 40px 15px 60px;
+    }
+
+    .answered-container {
+        width: 100%;
+    }
+
+
+    /* =====================
+       PAGE HEADING
+    ===================== */
+
+    .page-heading {
+        gap: 9px;
+
+        margin-bottom: 22px;
+    }
+
+    .page-heading i {
+        width: 38px;
+        height: 38px;
+
+        font-size: 18px;
+
+        border-radius: 10px;
+    }
+
+    .page-heading h1 {
+        font-size: 21px;
+    }
+
+
+    /* =====================
+       CARDS
+    ===================== */
+
+    .answered-list {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        justify-items: stretch;
+    }
+
+    .answered-card {
+        width: 100%;
+
+        padding: 17px;
+
+        border-radius: 14px;
+    }
+
+
+    /* =====================
+       CARD TOP
+    ===================== */
+
+    .card-top {
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+
+    /* =====================
+       PATIENT
+    ===================== */
+
+    .patient-info {
+        gap: 9px;
+    }
+
+    .patient-icon {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 10px;
+    }
+
+    .patient-info h2 {
+        font-size: 16px;
+    }
+
+    .patient-info span {
+        font-size: 11px;
+    }
+
+
+    /* =====================
+       STATUS
+    ===================== */
+
+    .status {
+        font-size: 11px;
+
+        padding: 5px 8px;
+    }
+
+
+    /* =====================
+       QUESTION
+    ===================== */
+
+    .question-preview {
+        padding: 14px;
+
+        border-radius: 11px;
+    }
+
+    .question-preview p {
+        font-size: 13px;
+    }
+
+
+    /* =====================
+       BUTTON
+    ===================== */
+
+    .details-btn {
+        min-height: 43px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .answered-section {
+        padding: 35px 12px 50px;
+    }
+
+
+    /* HEADING */
+
+    .page-heading {
+        gap: 7px;
+    }
+
+    .page-heading i {
+        width: 35px;
+        height: 35px;
+
+        font-size: 16px;
+
+        border-radius: 9px;
+    }
+
+    .page-heading h1 {
+        font-size: 19px;
+    }
+
+
+    /* CARD */
+
+    .answered-card {
+        padding: 15px;
+
+        border-radius: 13px;
+    }
+
+
+    /* PATIENT */
+
+    .patient-icon {
+        width: 37px;
+        height: 37px;
+
+        font-size: 14px;
+    }
+
+    .patient-info h2 {
+        font-size: 15px;
+    }
+
+    .patient-info span {
+        font-size: 10px;
+    }
+
+
+    /* STATUS */
+
+    .status {
+        font-size: 10px;
+
+        padding: 4px 7px;
+    }
+
+
+    /* QUESTION */
+
+    .question-preview {
+        padding: 12px;
+    }
+
+    .question-title {
+        font-size: 11px;
+    }
+
+    .question-preview p {
+        font-size: 12px;
+    }
+
+
+    /* BUTTON */
+
+    .details-btn {
+        min-height: 40px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+    .answered-section {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+    .card-top {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .status {
+        width: fit-content;
+
+        align-self: flex-start;
+    }
+}

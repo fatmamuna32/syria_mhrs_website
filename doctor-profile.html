@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الأسئلة قيد الانتظار</title>
+
+    <link rel="stylesheet" href="doctor-profile.css">
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <!-- زر القائمة -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <!-- الشعار -->
+        <a href="index.html" class="logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </a>
+
+        <!-- القائمة -->
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="القائمة الرئيسية">
+
+             <a href="index.html">
+                الرئيسية
+            </a>
+
+            <a href="pharmacy.html">
+                الصيدليات المناوبة
+            </a>
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+        </nav>
+       <a
+            href="patient-profile.html"
+            class="user-icon"
+            aria-label="تسجيل الدخول"
+            title="تسجيل الدخول">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+    </header>
+    
+
+
+
+
+     <main class="dashboard">
+
+        <!-- معلومات المستخدم -->
+        <section class="profile-card">
+
+            <div class="profile-top">
+
+                <div class="profile-image">
+                    <i class="fa-regular fa-user"></i>
+                    <span class="edit-image">
+                        <i class="fa-solid fa-pen"></i>
+                    </span>
+                </div>
+
+                <div class="profile-info">
+                    <h2>المعلومات الشخصية</h2>
+                    <p>نور علي أحمد</p>
+                    <span>اختصاصي العيون</span>
+                </div>
+
+            </div>
+
+            <div class="profile-details">
+
+                <div class="detail-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>المدينة</strong>
+                        <span>دمشق، سوريا</span>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>البريد الإلكتروني</strong>
+                        <span>nour@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>رقم الهاتف</strong>
+                        <span>09XXXXXXXX</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="edit-profile">
+                تعديل المعلومات الشخصية
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+
+        </section>
+
+
+        <!-- الإحصائيات -->
+        <section class="cards-grid">
+
+
+
+            <!-- الأسئلة قيد الانتظار -->
+            <div class="stat-card">
+
+                <div class="stat-title">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>الأسئلة قيد الانتظار</span>
+                </div>
+
+                <div class="stat-number">20</div>
+
+                <button class="view-btn">
+                    عرض الأسئلة
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- المواعيد قيد الانتظار -->
+            <div class="stat-card">
+
+                <div class="stat-title">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>المواعيد قيد الانتظار</span>
+                </div>
+
+                <div class="stat-number">10</div>
+
+                <button class="view-btn">
+                    عرض المواعيد
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+            </div>
+
+
+            <!-- الأسئلة المكتملة -->
+            <div class="stat-card">
+
+                <div class="stat-title">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>الأسئلة المكتملة</span>
+                </div>
+
+                <div class="stat-number">20</div>
+
+                <button class="view-btn">
+                    عرض الأسئلة
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+            </div>
+
+
+            <!-- المواعيد المكتملة -->
+            <div class="stat-card">
+
+                <div class="stat-title">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>المواعيد المكتملة</span>
+                </div>
+
+                <div class="stat-number">10</div>
+
+                <button class="view-btn">
+                    عرض المواعيد
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+            </div>
+
+
+
+            <!-- المواعيد المؤجلة -->
+            <div class="stat-card">
+
+                <div class="stat-title">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>المواعيد المؤجلة</span>
+                </div>
+
+                <div class="stat-number">10</div>
+
+                <button class="view-btn">
+                    عرض المؤجلة
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+            </div>
+
+
+            <!-- المواعيد الملغاة -->
+            <div class="stat-card">
+
+                <div class="stat-title">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>المواعيد الملغاة</span>
+                </div>
+
+                <div class="stat-number">20</div>
+
+                <button class="view-btn">
+                    عرض الملغاة
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- إضافة نصيحة -->
+        <section class="advice-card">
+
+            <div class="advice-title">
+                <i class="fa-regular fa-lightbulb"></i>
+                <span>أضف نصيحة للمريض</span>
+            </div>
+
+            <textarea placeholder="اكتب النصيحة..."></textarea>
+
+            <button class="send-btn">
+                إرسال
+            </button>
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+<footer>
+
+        <div class="footer-logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </div>
+
+
+        <div class="footer-links">
+
+           <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="all-questions.html">
+                الأسئلة الشائعة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="about.html">
+                من نحن
+            </a>
+
+
+            <a href="privacy.html">
+                سياسة الخصوصية
+            </a>
+
+
+            <a href="volunteerr.html">
+                شروط التطوع
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <p>
+            جميع الحقوق محفوظة لشركة © 2026
+        </p>
+
+    </footer>
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navbar = document.getElementById("navbar");
+
+    if (!menuToggle || !navbar) return;
+
+    /* فتح وإغلاق القائمة */
+    menuToggle.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+        navbar.classList.toggle("active");
+
+        const isOpen = navbar.classList.contains("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+        menuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+
+
+    /* إغلاق القائمة عند الضغط على رابط */
+    navbar.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navbar.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
+        });
+
+    });
+
+
+    /* إغلاق القائمة عند الضغط خارجها */
+    document.addEventListener("click", function (e) {
+
+        if (
+            !navbar.contains(e.target) &&
+            !menuToggle.contains(e.target)
+        ) {
+
+            navbar.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
+        }
+
+    });
+
+});
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       تعديل المعلومات الشخصية
+    ===================================================== */
+
+    const editProfile = document.querySelector(".edit-profile");
+
+    if (editProfile) {
+        editProfile.addEventListener("click", function () {
+            window.location.href = "edit-profile.html";
+        });
+    }
+
+
+    /* =====================================================
+       أزرار الإحصائيات
+    ===================================================== */
+
+    const cards = document.querySelectorAll(".stat-card");
+
+    cards.forEach(function (card) {
+
+        const title = card.querySelector(".stat-title span");
+        const button = card.querySelector(".view-btn");
+
+        if (!title || !button) return;
+
+        const text = title.textContent.trim();
+
+
+        /* المواعيد قيد الانتظار */
+        if (text === "المواعيد قيد الانتظار") {
+
+            button.addEventListener("click", function () {
+                window.location.href = "pending-appointments.html";
+            });
+
+        }
+
+
+        /* الأسئلة قيد الانتظار */
+        else if (text === "الأسئلة قيد الانتظار") {
+
+            button.addEventListener("click", function () {
+                window.location.href = "pending-questions.html";
+            });
+
+        }
+
+
+        /* المواعيد المكتملة */
+        else if (text === "المواعيد المكتملة") {
+
+            button.addEventListener("click", function () {
+                window.location.href = "completed-appointments.html";
+            });
+
+        }
+
+
+        /* الأسئلة المكتملة */
+        else if (text === "الأسئلة المكتملة") {
+
+            button.addEventListener("click", function () {
+                window.location.href = "Completed-questions.html";
+            });
+
+        }
+
+
+        /* المواعيد المؤجلة */
+        else if (text === "المواعيد المؤجلة") {
+
+            button.addEventListener("click", function () {
+                window.location.href = "postponed-appointments.html ";
+            });
+
+        }
+
+
+        /* المواعيد الملغاة */
+        else if (text === "المواعيد الملغاة") {
+
+            button.addEventListener("click", function () {
+                window.location.href = "cancelled-appointments.html";
+            });
+
+        }
+
+    });
+
+
+    /* =====================================================
+       إرسال النصيحة
+    ===================================================== */
+
+    const sendButton = document.querySelector(".send-btn");
+    const adviceTextarea = document.querySelector(".advice-card textarea");
+
+    if (sendButton && adviceTextarea) {
+
+        sendButton.addEventListener("click", function () {
+
+            const advice = adviceTextarea.value.trim();
+
+            if (advice === "") {
+
+                alert("يرجى كتابة النصيحة أولاً");
+
+                adviceTextarea.focus();
+
+                return;
+            }
+
+            alert("تم إرسال النصيحة بنجاح");
+
+            adviceTextarea.value = "";
+
+        });
+
+    }
+
+});
+</script>
+
+</body>
+</html>

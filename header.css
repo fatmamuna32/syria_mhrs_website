@@ -1,0 +1,581 @@
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    width: 100%;
+    height: 75px;
+    min-height: 75px;
+
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5%;
+
+    border-bottom: 1px solid #e5eeee;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    direction: rtl;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+
+    max-height: 60px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 23px;
+}
+
+.navbar a {
+    color: var(--green-dark);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+}
+
+.navbar a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   USER ICON
+========================================================= */
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--green-dark);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--green-dark);
+
+    font-size: 17px;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+}
+
+.user-icon:hover {
+    background: var(--green-dark);
+
+    color: #fff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--green-dark);
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .site-header {
+        height: 75px;
+        min-height: 75px;
+
+        padding: 0 4%;
+    }
+
+    .logo img {
+        width: 110px;
+
+        max-height: 55px;
+    }
+
+    .navbar {
+        gap: 14px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .user-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        width: 100%;
+
+        height: 78px;
+        min-height: 78px;
+
+        padding: 0 5%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        position: relative;
+
+        background: #fff;
+
+        z-index: 1000;
+    }
+
+
+    /* =====================================================
+       LOGO - CENTER
+    ===================================================== */
+
+    .site-header .logo {
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+        margin: 0;
+
+        padding: 0;
+
+        z-index: 1002;
+    }
+
+    .site-header .logo img {
+        width: 100px;
+
+        height: 48px;
+
+        max-height: 48px;
+
+        object-fit: contain;
+
+        display: block;
+    }
+
+
+    /* =====================================================
+       MENU BUTTON - RIGHT
+    ===================================================== */
+
+    .menu-toggle {
+        display: flex;
+
+        position: absolute;
+
+        right: 5%;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        width: 40px;
+        height: 40px;
+
+        padding: 0;
+
+        margin: 0;
+
+        border: none;
+
+        background: transparent;
+
+        color: var(--green-dark);
+
+        font-size: 23px;
+
+        cursor: pointer;
+
+        align-items: center;
+        justify-content: center;
+
+        z-index: 1003;
+    }
+
+    .menu-toggle:hover {
+        color: var(--green);
+    }
+
+
+    /* =====================================================
+       USER ICON - LEFT
+    ===================================================== */
+
+    .site-header .user-icon {
+        position: absolute;
+
+        left: 5%;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        width: 35px;
+        height: 35px;
+
+        margin: 0;
+
+        z-index: 1003;
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       NAVBAR - HIDDEN
+    ===================================================== */
+
+    .navbar {
+        position: absolute;
+
+        top: 78px;
+
+        right: 0;
+        left: 0;
+
+        width: 100%;
+
+        height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        margin: 0;
+
+        padding: 6px 5%;
+
+        background: #fff;
+
+        border-top: 1px solid #edf1f2;
+
+        border-bottom: 1px solid #e5eeee;
+
+        box-shadow:
+            0 8px 20px rgba(0, 0, 0, .08);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        pointer-events: none;
+
+        transition:
+            opacity .25s ease,
+            transform .25s ease,
+            visibility .25s ease;
+
+        z-index: 1001;
+    }
+
+
+    /* =====================================================
+       NAVBAR - OPEN
+    ===================================================== */
+
+.navbar.show,
+.navbar.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+    .navbar a {
+        width: 100%;
+
+        padding: 13px 10px;
+
+        text-align: right;
+
+        color: var(--green-dark);
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        border-bottom: 1px solid #f0f3f3;
+
+        transition: .2s ease;
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+    .navbar a:hover {
+        background: #edf6f4;
+
+        color: var(--green);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .site-header {
+        height: 75px;
+
+        min-height: 75px;
+
+        padding: 0 5%;
+    }
+
+    .site-header .logo img {
+        width: 90px;
+
+        height: 43px;
+
+        max-height: 43px;
+    }
+
+    .menu-toggle {
+        right: 5%;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 21px;
+    }
+
+    .site-header .user-icon {
+        left: 5%;
+
+        width: 33px;
+        height: 33px;
+
+        font-size: 13px;
+    }
+
+    .navbar {
+        top: 75px;
+    }
+
+    .navbar a {
+        padding: 11px 10px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+
+    background: #428177;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 15px 10px 12px;
+
+    direction: rtl;
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
+
+.footer-logo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: 50px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px 20px;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: .25s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   FOOTER TEXT
+========================================================= */
+
+.footer-links p {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   FOOTER LINE
+========================================================= */
+
+footer hr {
+    width: 75%;
+
+    margin: 10px auto;
+
+    border: none;
+
+    border-top: 1px solid rgba(255, 255, 255, .25);
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+footer p {
+    margin: 0;
+}

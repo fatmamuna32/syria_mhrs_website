@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تعديل المعلومات الشخصية</title>
+
+    <link rel="stylesheet" href="edit-profile.css">
+  <link rel="stylesheet" href="header.css">
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Tajawal -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <!-- زر القائمة -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <!-- الشعار -->
+        <a href="index.html" class="logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </a>
+
+        <!-- القائمة -->
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="القائمة الرئيسية">
+
+         <a href="index.html">
+                الرئيسية
+            </a>
+
+            <a href="pharmacy.html">
+                الصيدليات المناوبة
+            </a>
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+        </nav>
+
+        <!-- تسجيل الدخول -->
+       <a
+            href="patient-profile.html"
+            class="user-icon"
+            aria-label="تسجيل الدخول"
+            title="تسجيل الدخول">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+    </header>
+    
+
+
+
+
+<main>
+
+    <section class="edit-section">
+
+        <div class="edit-container">
+
+
+            <!-- =========================
+                 البطاقة
+            ========================= -->
+
+            <div class="edit-card">
+
+                <!-- عنوان البطاقة -->
+
+                <div class="card-heading">
+
+                    <h2>
+                                             تعديل المعلومات الشخصية
+
+                    </h2>
+
+                    <p>
+                         المعلومات الشخصية
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     النموذج
+                ========================= -->
+
+                <form id="profileForm">
+
+
+
+
+
+
+
+                    <!-- الاسم الكامل -->
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            الاسم الكامل
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="مثال: د. احمد"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!-- رقم الهاتف -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            رقم الهاتف
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="ادخل رقم الهاتف"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!-- المدينة -->
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            المدينة
+                        </label>
+
+                        <div class="input-wrapper select-wrapper">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <select
+                                id="city"
+                                name="city"
+                                required>
+
+                                <option value="" selected disabled>
+                                    اختر المدينة
+                                </option>
+
+                                <option value="damascus">
+                                    دمشق
+                                </option>
+
+                                <option value="aleppo">
+                                    حلب
+                                </option>
+
+                                <option value="homs">
+                                    حمص
+                                </option>
+
+                                <option value="hama">
+                                    حماة
+                                </option>
+
+                                <option value="latakia">
+                                    اللاذقية
+                                </option>
+
+                                <option value="tartus">
+                                    طرطوس
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- البريد الإلكتروني -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            البريد الإلكتروني
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="ahmad@gmail.com"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- التخصص -->
+
+                    <div class="form-group full-width">
+
+                        <label for="specialty">
+                            التخصص
+                        </label>
+
+                        <div class="input-wrapper select-wrapper">
+
+                            <i class="fa-solid fa-stethoscope"></i>
+
+                            <select
+                                id="specialty"
+                                name="specialty"
+                                required>
+
+                                <option value="" selected disabled>
+                                    اختر تخصصك
+                                </option>
+
+                                <option value="general">
+                                    طب عام
+                                </option>
+
+                                <option value="internal">
+                                    الطب الباطني
+                                </option>
+
+                                <option value="pediatrics">
+                                    طب الأطفال
+                                </option>
+
+                                <option value="ophthalmology">
+                                    طب العيون
+                                </option>
+
+                                <option value="dermatology">
+                                    الأمراض الجلدية
+                                </option>
+
+                                <option value="cardiology">
+                                    أمراض القلب
+                                </option>
+
+                                <option value="dentistry">
+                                    طب الأسنان
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- زر الحفظ -->
+
+                    <button
+                        type="submit"
+                        class="save-button">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        حفظ التعديلات
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+    <!-- ================= FOOTER ================= -->
+<footer>
+
+        <div class="footer-logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </div>
+
+
+        <div class="footer-links">
+
+  <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="all-questions.html">
+                الأسئلة الشائعة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="about.html">
+                من نحن
+            </a>
+
+
+            <a href="privacy.html">
+                سياسة الخصوصية
+            </a>
+
+
+            <a href="volunteerr.html">
+                شروط التطوع
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+        </div>
+
+
+        <hr>
+
+
+        <p>
+            جميع الحقوق محفوظة لشركة © 2026
+        </p>
+
+    </footer>
+
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+const profileForm = document.getElementById("profileForm");
+
+profileForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const fullName =
+        document.getElementById("fullName").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const city =
+        document.getElementById("city").value;
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const specialty =
+        document.getElementById("specialty").value;
+
+
+    if (!phone) {
+        alert("يرجى إدخال رقم الهاتف.");
+        return;
+    }
+
+
+    if (!fullName) {
+        alert("يرجى إدخال الاسم الكامل.");
+        return;
+    }
+
+
+    if (!city) {
+        alert("يرجى اختيار المدينة.");
+        return;
+    }
+
+
+    if (!email) {
+        alert("يرجى إدخال البريد الإلكتروني.");
+        return;
+    }
+
+
+    if (!specialty) {
+        alert("يرجى اختيار التخصص.");
+        return;
+    }
+
+
+    alert("تم حفظ المعلومات الشخصية بنجاح.");
+
+});
+
+</script>
+
+</body>
+
+</html>

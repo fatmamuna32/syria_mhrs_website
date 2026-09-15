@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>معلومات المريض</title>
+
+    <link rel="stylesheet" href="question-details.css">
+
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="فتح القائمة"
+        aria-expanded="false">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+    <a href="index.html" class="logo">
+
+        <img
+            src="ımage/Ministry-of-Healthlogooo.png"
+            alt="شعار وزارة الصحة">
+
+    </a>
+
+
+    <nav
+        class="navbar"
+        id="navbar"
+        aria-label="القائمة الرئيسية">
+
+        <a href="index.html">
+            الرئيسية
+        </a>
+
+        <a href="pharmacy.html">
+            الصيدليات المناوبة
+        </a>
+
+        <a href="appointments.html">
+            احجز موعد
+        </a>
+
+        <a href="Medical_Tips.html">
+            نصائح طبية
+        </a>
+
+        <a href="doctor-profile.html">
+            الأطباء
+        </a>
+
+        <a href="complaints.html">
+            قسم الشكاوى
+        </a>
+
+    </nav>
+
+
+       <a
+            href="patient-profile.html"
+            class="user-icon"
+            aria-label="تسجيل الدخول"
+            title="تسجيل الدخول">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+</header>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+    <section class="question-details-section">
+
+        <div class="question-details-container">
+
+
+            <!-- =========================
+                 PATIENT CARD
+            ========================= -->
+
+            <div class="patient-card">
+
+                <div class="patient-header">
+
+                    <h1>
+                        معلومات المريض
+                    </h1>
+
+                </div>
+
+
+                <div class="patient-info">
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            العمر
+                        </span>
+
+                        <strong>
+                            45
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            الاسم الكامل
+                        </span>
+
+                        <strong>
+                            سارة احمد
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            رقم الهاتف
+                        </span>
+
+                        <strong>
+                            09XXXXXXXX
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 QUESTION CARD
+            ========================= -->
+
+            <div class="question-card">
+
+                <div class="section-title">
+
+                    <div class="title-icon">
+
+                        <i class="fa-regular fa-circle-question"></i>
+
+                    </div>
+
+                    <h2>
+                        السؤال
+                    </h2>
+
+                </div>
+
+
+                <div class="question-box">
+
+                    <p>
+                        للضوء ما السبب؟
+                    </p>
+
+                    <p>
+                        وانزعاج شديد عند التعرض
+                    </p>
+
+                    <p>
+                        أشعر بألم داخل العين
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 ANSWER CARD
+            ========================= -->
+
+            <div class="answer-card">
+
+                <div class="section-title">
+
+                    <div class="title-icon">
+
+                        <i class="fa-solid fa-reply"></i>
+
+                    </div>
+
+                    <h2>
+                        الرد على السؤال
+                    </h2>
+
+                </div>
+
+
+                <form id="answerForm">
+
+
+                    <div class="answer-box">
+
+                        <textarea
+                            id="answer"
+                            name="answer"
+                            placeholder="ارسل الرد..."
+                            required></textarea>
+
+
+                        <div class="answer-tools">
+
+
+                            <!-- IMAGE -->
+
+                            <label
+                                class="answer-tool"
+                                title="إضافة صورة">
+
+                                <i class="fa-regular fa-image"></i>
+
+                                <input
+                                    type="file"
+                                    id="imageFile"
+                                    accept="image/*"
+                                    hidden>
+
+                            </label>
+
+
+                            <!-- FILE -->
+
+                            <label
+                                class="answer-tool"
+                                title="إضافة ملف">
+
+                                <i class="fa-solid fa-paperclip"></i>
+
+                                <input
+                                    type="file"
+                                    id="documentFile"
+                                    accept=".pdf,.doc,.docx,.txt"
+                                    hidden>
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="selected-files"
+                        id="selectedFiles">
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="answer-btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        الرد على السؤال
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+   <!-- ================= FOOTER ================= -->
+<footer>
+
+        <div class="footer-logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </div>
+
+   
+
+
+
+        <div class="footer-links">
+
+  <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="all-questions.html">
+                الأسئلة الشائعة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="about.html">
+                من نحن
+            </a>
+
+
+            <a href="privacy.html">
+                سياسة الخصوصية
+            </a>
+
+
+            <a href="volunteerr.html">
+                شروط التطوع
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+
+        </div>
+
+        <hr>
+
+
+        <p>
+            جميع الحقوق محفوظة لشركة © 2026
+        </p>
+
+    </footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuToggle = document.getElementById("menuToggle");
+
+const navbar = document.getElementById("navbar");
+
+
+if (menuToggle && navbar) {
+
+    menuToggle.addEventListener("click", function () {
+
+        navbar.classList.toggle("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        const isOpen = navbar.classList.contains("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+
+        if (isOpen) {
+
+            icon.classList.remove("fa-bars");
+
+            icon.classList.add("fa-xmark");
+
+        } else {
+
+            icon.classList.remove("fa-xmark");
+
+            icon.classList.add("fa-bars");
+
+        }
+
+    });
+
+
+    navbar.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navbar.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            const icon =
+                menuToggle.querySelector("i");
+
+
+            icon.classList.remove("fa-xmark");
+
+            icon.classList.add("fa-bars");
+
+        });
+
+    });
+
+}
+
+
+/* =========================
+   FILES
+========================= */
+
+const imageFile =
+    document.getElementById("imageFile");
+
+const documentFile =
+    document.getElementById("documentFile");
+
+const selectedFiles =
+    document.getElementById("selectedFiles");
+
+
+function showSelectedFile(file, icon) {
+
+    if (!file) {
+        return;
+    }
+
+
+    const fileBox =
+        document.createElement("div");
+
+
+    fileBox.className =
+        "selected-file";
+
+
+    fileBox.innerHTML = `
+
+        <i class="${icon}"></i>
+
+        <span>
+            ${file.name}
+        </span>
+
+    `;
+
+
+    selectedFiles.appendChild(fileBox);
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+imageFile.addEventListener(
+    "change",
+    function () {
+
+        const file =
+            this.files[0];
+
+
+        showSelectedFile(
+            file,
+            "fa-regular fa-image"
+        );
+
+    }
+);
+
+
+/* =========================
+   DOCUMENT
+========================= */
+
+documentFile.addEventListener(
+    "change",
+    function () {
+
+        const file =
+            this.files[0];
+
+
+        showSelectedFile(
+            file,
+            "fa-solid fa-paperclip"
+        );
+
+    }
+);
+
+
+/* =========================
+   SEND ANSWER
+========================= */
+
+document
+    .getElementById("answerForm")
+    .addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            const answer =
+                document
+                    .getElementById("answer")
+                    .value
+                    .trim();
+
+
+            if (!answer) {
+
+                alert(
+                    "يرجى كتابة الرد أولاً"
+                );
+
+                return;
+
+            }
+
+
+            alert(
+                "تم إرسال الرد بنجاح"
+            );
+
+
+            document
+                .getElementById("answer")
+                .value = "";
+
+
+            selectedFiles.innerHTML = "";
+
+
+            imageFile.value = "";
+
+            documentFile.value = "";
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>

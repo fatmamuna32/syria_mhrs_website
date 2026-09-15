@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+:root {
+    --green-dark: #054239;
+    --green: #428177;
+    --gold: #B9A779;
+    --bg: #f6fbfc;
+    --text: #263238;
+    --muted: #778589;
+    --border: #e2ebed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Tajawal", Arial, Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+
+
+/* ================= VOLUNTEER HERO ================= */
+
+.volunteer-hero {
+    width: 100%;
+    min-height: 520px;
+
+    background: #428177;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.volunteer-content {
+    width: min(90%, 900px);
+    margin: auto;
+}
+
+.volunteer-content h1 {
+    color: #fff;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+    line-height: 1.4;
+}
+
+.volunteer-content p {
+    color: #edf7f5;
+
+    font-size: 20px;
+
+    line-height: 2;
+
+    margin-bottom: 35px;
+}
+
+.volunteer-btn {
+    display: inline-block;
+
+    background: #B9A779;
+    color: #fff;
+
+    padding: 13px 35px;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+}
+
+.volunteer-btn:hover {
+    background: #fff;
+    color: #054239;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= MAIN ================= */
+
+main {
+    padding: 55px 0 80px;
+}
+
+.page-container {
+    width: min(90%, 1000px);
+    margin: auto;
+}
+
+
+/* ================= PAGE TITLE ================= */
+
+.page-title {
+    text-align: center;
+
+    color: var(--green-dark);
+
+    font-size: 30px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= FORM SECTION ================= */
+
+.form-section {
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .05);
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.step-number {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: #fff;
+
+    font-weight: 800;
+
+    font-size: 18px;
+}
+
+.section-heading h2 {
+    color: var(--green-dark);
+
+    font-size: 23px;
+
+    margin-bottom: 3px;
+}
+
+.section-heading p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+
+/* ================= FORM ================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    color: #455a60;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+input,
+select {
+    width: 100%;
+
+    min-height: 48px;
+
+    border: 1px solid #d8e3e5;
+
+    border-radius: 8px;
+
+    padding: 11px 14px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: var(--text);
+
+    transition: .25s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 0 3px rgba(66, 129, 119, .12);
+}
+
+
+/* ================= VOLUNTEER ================= */
+
+.volunteer-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.next-btn,
+.submit-btn {
+    width: 100%;
+
+    min-height: 48px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    margin-top: 25px;
+
+    background: var(--green-dark);
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.next-btn:hover,
+.submit-btn:hover {
+    background: var(--gold);
+}
+
+
+/* ================= TIMES ================= */
+
+.times-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.time-option {
+    cursor: pointer;
+}
+
+.time-option input {
+    display: none;
+}
+
+.time-option span {
+    min-height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: var(--green-dark);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.time-option span:hover {
+    border-color: var(--green);
+
+    background: #f3f9f8;
+}
+
+.time-option input:checked + span {
+    background: var(--green);
+
+    border-color: var(--green);
+
+    color: #fff;
+}
+
+
+/* ================= AGREEMENT ================= */
+
+.agree-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.agree-box input {
+    width: 18px;
+    height: 18px;
+
+    min-height: auto;
+
+    accent-color: var(--green);
+}
+
+
+
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+    .site-header {
+        padding: 10px 4%;
+        gap: 15px;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .logo img {
+        width: 125px;
+        height: 50px;
+    }
+
+    .login {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .times-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+
+    .site-header {
+        min-height: 70px;
+        height: 70px;
+
+        padding: 8px 4%;
+
+        display: flex;
+        align-items: center;
+
+        position: sticky;
+        top: 0;
+
+        gap: 0;
+    }
+
+
+    /* زر القائمة - أقصى اليمين */
+
+    .menu-toggle {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        order: 1;
+
+        width: 42px;
+        height: 42px;
+
+        margin: 0;
+
+        border: none;
+
+        background: transparent;
+
+        color: var(--green-dark);
+
+        font-size: 25px;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        flex-shrink: 0;
+    }
+
+
+    /* الشعار - الوسط */
+
+    .logo {
+        order: 2;
+
+        margin: 0 auto;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 115px;
+        height: 50px;
+
+        object-fit: contain;
+    }
+
+
+    /* تسجيل الدخول - اليسار */
+
+    .login {
+        order: 3;
+
+        margin: 0;
+
+        padding: 6px 10px;
+
+        font-size: 11px;
+
+        white-space: nowrap;
+
+        flex-shrink: 0;
+    }
+
+
+    /* ================= MOBILE NAVBAR ================= */
+
+    .navbar {
+        position: absolute;
+
+        top: 70px;
+
+        right: 0;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 8px 5%;
+
+        background: #fff;
+
+        border-bottom: 1px solid var(--border);
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+        z-index: 999;
+
+        flex: none;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .navbar a {
+        width: 100%;
+
+        padding: 13px 10px;
+
+        border-bottom: 1px solid #edf2f2;
+
+        font-size: 14px;
+
+        text-align: right;
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .volunteer-hero {
+        min-height: 500px;
+
+        padding: 60px 18px;
+    }
+
+    .volunteer-content {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .volunteer-content h1 {
+        font-size: 28px;
+
+        line-height: 1.6;
+
+        margin-bottom: 18px;
+    }
+
+    .volunteer-content p {
+        font-size: 15px;
+
+        line-height: 2;
+
+        margin-bottom: 30px;
+    }
+
+    .volunteer-btn {
+        font-size: 15px;
+
+        padding: 12px 30px;
+
+        border-radius: 8px;
+    }
+
+
+    /* ================= MAIN ================= */
+
+    main {
+        padding: 35px 0 55px;
+    }
+
+    .page-container {
+        width: 92%;
+
+        margin: auto;
+    }
+
+    .page-title {
+        font-size: 24px;
+
+        line-height: 1.6;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* ================= FORM ================= */
+
+    .form-section {
+        padding: 22px 17px;
+
+        border-radius: 14px;
+
+        margin-bottom: 25px;
+    }
+
+    .form-grid,
+    .volunteer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+
+    /* ================= SECTION HEADING ================= */
+
+    .section-heading {
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .step-number {
+        width: 36px;
+        height: 36px;
+
+        font-size: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+
+    /* ================= INPUTS ================= */
+
+    input,
+    select {
+        min-height: 48px;
+
+        font-size: 14px;
+    }
+
+
+    /* ================= TIMES ================= */
+
+    .times-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .time-option span {
+        min-height: 45px;
+
+        font-size: 13px;
+    }
+
+
+    /* ================= BUTTONS ================= */
+
+    .next-btn,
+    .submit-btn {
+        min-height: 48px;
+
+        font-size: 14px;
+
+        margin-top: 22px;
+    }
+
+
+    /* ================= AGREEMENT ================= */
+
+    .agree-box {
+        align-items: flex-start;
+
+        gap: 8px;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+    .agree-box input {
+        flex-shrink: 0;
+
+        margin-top: 3px;
+    }
+}
+
+    /* ================= FOOTER ================= */
+
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 450px) {
+
+
+
+    /* HERO */
+
+    .volunteer-hero {
+        min-height: 480px;
+
+        padding: 55px 15px;
+    }
+
+    .volunteer-content h1 {
+        font-size: 24px;
+
+        line-height: 1.6;
+    }
+
+    .volunteer-content p {
+        font-size: 14px;
+
+        line-height: 2;
+    }
+
+    .volunteer-btn {
+        width: 100%;
+
+        max-width: 220px;
+
+        font-size: 14px;
+
+        padding: 11px 25px;
+    }
+
+
+    /* MAIN */
+
+    main {
+        padding: 30px 0 50px;
+    }
+
+    .page-container {
+        width: 94%;
+    }
+
+    .page-title {
+        font-size: 21px;
+
+        line-height: 1.6;
+    }
+
+
+    /* FORM */
+
+    .form-section {
+        padding: 18px 14px;
+
+        border-radius: 13px;
+    }
+
+    .section-heading h2 {
+        font-size: 18px;
+    }
+
+
+    /* TIMES */
+
+    .times-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .time-option span {
+        font-size: 12px;
+
+        min-height: 43px;
+    }
+
+
+}

@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>اسأل الطبيب</title>
+
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="stylesheet" href="Common.css">
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header class="site-header">
+
+
+        <!-- زر القائمة -->
+        <button
+            class="menu-icon"
+            id="menuIcon"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <!-- الشعار -->
+        <a href="index.html" class="logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="وزارة الصحة">
+
+        </a>
+
+
+        <!-- القائمة -->
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="القائمة الرئيسية">
+
+
+  <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="pharmacy.html">
+                الصيدليات المناوبة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+        </nav>
+
+
+        <!-- تسجيل الدخول -->
+        <a href="login.html" class="login">
+            تسجيل الدخول
+        </a>
+
+
+    </header>
+
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================= -->
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ===================================================== -->
+<div class="heartbeat">
+    <svg viewBox="0 0 1000 160" preserveAspectRatio="none">
+        <polyline points="
+        0,80
+        120,80
+        170,80
+        190,80
+        205,25
+        220,135
+        235,80
+        300,80
+        350,80
+        390,80
+        420,80
+        440,80
+        455,15
+        475,145
+        495,80
+        560,80
+        610,80
+        650,80
+        680,80
+        700,80
+        715,30
+        735,130
+        755,80
+        820,80
+        870,80
+        920,80
+        1000,80
+        " />
+    </svg>
+</div>
+
+
+        <!-- =====================================================
+             ASK DOCTOR
+        ===================================================== -->
+
+        <section
+            class="section ask-section"
+            id="ask">
+
+
+            <div class="container">
+
+
+                <h2 class="section-title">
+                    اسأل الطبيب
+                </h2>
+
+
+                <p class="section-description">
+                    أرسل سؤالك وسيقوم الطبيب المختص بالإجابة عليك
+                </p>
+
+
+
+                <!-- FORM CARD -->
+
+                <div class="form-card">
+
+
+                    <h3>
+                        اطرح سؤالك على الطبيب
+                    </h3>
+
+
+                    <hr class="title-line">
+
+
+
+                    <form id="questionForm">
+
+
+                        <!-- الاسم + الهاتف -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="أدخل رقم الهاتف"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="أدخل الاسم الكامل"
+                                    required>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- الطبيب + التخصص -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <select
+                                    id="doctor"
+                                    name="doctor"
+                                    required>
+
+                                    <option value="">
+                                        الطبيب
+                                    </option>
+
+                                    <option value="ahmad">
+                                        د. أحمد محمد
+                                    </option>
+
+                                    <option value="mohammad">
+                                        د. محمد علي
+                                    </option>
+
+                                    <option value="sara">
+                                        د. سارة أحمد
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <select
+                                    id="specialty"
+                                    name="specialty"
+                                    required>
+
+                                    <option value="">
+                                        اختر التخصص
+                                    </option>
+
+                                    <option value="family">
+                                        طب الأسرة
+                                    </option>
+
+                                    <option value="internal">
+                                        باطنية
+                                    </option>
+
+                                    <option value="children">
+                                        أطفال
+                                    </option>
+
+                                    <option value="dermatology">
+                                        جلدية
+                                    </option>
+
+                                    <option value="heart">
+                                        قلب
+                                    </option>
+
+                                    <option value="women">
+                                        نساء وولادة
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- تفاصيل الشكوى -->
+
+                        <div class="form-group complaint-box">
+
+
+                            <div class="textarea-wrapper">
+
+
+                                <textarea
+                                    id="complaint"
+                                    name="complaint"
+                                    placeholder="اشرح بالتفصيل..."
+                                    required></textarea>
+
+
+
+                                <!-- رفع الملفات -->
+
+                                <div class="upload-box">
+
+
+                                    <!-- صورة -->
+
+                                    <label
+                                        for="complaintImage"
+                                        class="upload-icon"
+                                        title="إرفاق صورة">
+
+                                        <i class="fa-solid fa-image"></i>
+
+                                    </label>
+
+
+                                    <input
+                                        type="file"
+                                        id="complaintImage"
+                                        name="complaintImage"
+                                        accept="image/*"
+                                        hidden>
+
+
+
+                                    <!-- PDF / Word -->
+
+                                    <label
+                                        for="complaintFile"
+                                        class="upload-icon"
+                                        title="إرفاق ملف">
+
+                                        <i class="fa-solid fa-file-pdf"></i>
+
+                                    </label>
+
+
+                                    <input
+                                        type="file"
+                                        id="complaintFile"
+                                        name="complaintFile"
+                                        accept=".pdf,.doc,.docx"
+                                        hidden>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- الملفات المختارة -->
+
+                            <div
+                                class="selected-files"
+                                id="selectedFiles">
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- زر الإرسال -->
+
+                        <a
+                            href="pending-questions.html"
+                            class="submit-btn">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            إرسال
+
+                        </a>
+
+
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FAQ
+        ===================================================== -->
+
+        <section
+            class="section faq-section"
+            id="faq">
+
+
+            <!-- =================================================
+                 القسم الأول
+            ================================================= -->
+
+            <div class="container faq-container">
+
+
+                <h2 class="section-title">
+                    الأسئلة الشائعة
+                </h2>
+
+
+                <p class="section-description">
+                    إجابات على أكثر الأسئلة شيوعًا
+                </p>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 القسم الثاني
+            ================================================= -->
+
+            <div class="faq-list">
+
+
+                <!-- السؤال الأول -->
+
+                <div class="faq-item">
+
+
+                    <button
+                        class="faq-question"
+                        type="button">
+
+                        <span>
+                            هل يمكنني التواصل مع الطبيب عبر الواتساب؟
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+
+                        يمكنك التواصل مع الطبيب عبر وسيلة
+                        التواصل المتاحة حسب الخدمة والطبيب.
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- السؤال الثاني -->
+
+                <div class="faq-item">
+
+
+                    <button
+                        class="faq-question"
+                        type="button">
+
+                        <span>
+                            هل خدمة "اسأل الطبيب" مجانية؟
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+
+                        تختلف تكلفة الاستشارة حسب الطبيب
+                        والتخصص ونوع الخدمة.
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- السؤال الثالث -->
+
+                <div class="faq-item">
+
+
+                    <button
+                        class="faq-question"
+                        type="button">
+
+                        <span>
+                            هل يمكنني أن أطرح أكثر من سؤال؟
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+
+                        نعم، يمكنك طرح أكثر من سؤال وفق
+                        شروط الخدمة المتاحة.
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- السؤال الرابع -->
+
+                <div class="faq-item">
+
+
+                    <button
+                        class="faq-question"
+                        type="button">
+
+                        <span>
+                            هل يمكن لأي شخص أن يسأل؟
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+
+                        يمكن للمستخدمين الاستفادة من الخدمة
+                        وفق شروط التسجيل والاستخدام.
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="وزارة الصحة">
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+
+            <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="all-questions.html">
+                الأسئلة الشائعة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="about.html">
+                من نحن
+            </a>
+
+
+            <a href="privacy.html">
+                سياسة الخصوصية
+            </a>
+
+
+            <a href="volunteerr.html">
+                شروط التطوع
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <p>
+            جميع الحقوق محفوظة للشركة © 2026
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* =================================================
+                   MOBILE MENU
+                ================================================= */
+
+                const menuIcon =
+                    document.getElementById("menuIcon");
+
+                const navbar =
+                    document.getElementById("navbar");
+
+
+                menuIcon.addEventListener(
+                    "click",
+                    function () {
+
+                        const isOpen =
+                            navbar.classList.toggle("show");
+
+
+                        menuIcon.setAttribute(
+                            "aria-expanded",
+                            isOpen ? "true" : "false"
+                        );
+
+
+                        menuIcon.innerHTML =
+                            isOpen ? "✕" : "☰";
+
+                    }
+                );
+
+
+
+                /* =================================================
+                   CLOSE MENU
+                ================================================= */
+
+                document
+                    .querySelectorAll(".navbar a")
+                    .forEach(function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function () {
+
+                                navbar.classList.remove("show");
+
+
+                                menuIcon.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+
+                                menuIcon.innerHTML =
+                                    "☰";
+
+                            }
+                        );
+
+                    });
+
+
+
+                /* =================================================
+                   FAQ
+                ================================================= */
+
+                document
+                    .querySelectorAll(".faq-question")
+                    .forEach(function (button) {
+
+                        button.addEventListener(
+                            "click",
+                            function () {
+
+                                const item =
+                                    this.closest(".faq-item");
+
+
+                                const isOpen =
+                                    item.classList.contains(
+                                        "active"
+                                    );
+
+
+                                document
+                                    .querySelectorAll(
+                                        ".faq-item"
+                                    )
+                                    .forEach(
+                                        function (faq) {
+
+                                            faq.classList.remove(
+                                                "active"
+                                            );
+
+                                        }
+                                    );
+
+
+                                if (!isOpen) {
+
+                                    item.classList.add(
+                                        "active"
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    });
+
+
+
+                /* =================================================
+                   QUESTION FORM
+                ================================================= */
+
+                const questionForm =
+                    document.getElementById(
+                        "questionForm"
+                    );
+
+
+                const selectedFiles =
+                    document.getElementById(
+                        "selectedFiles"
+                    );
+
+
+
+                questionForm.addEventListener(
+                    "submit",
+                    function (event) {
+
+                        event.preventDefault();
+
+
+                        alert(
+                            "تم إرسال سؤالك بنجاح."
+                        );
+
+
+                        this.reset();
+
+
+                        selectedFiles.innerHTML =
+                            "";
+
+                    }
+                );
+
+
+
+                /* =================================================
+                   FILE UPLOAD
+                ================================================= */
+
+                const imageUpload =
+                    document.getElementById(
+                        "complaintImage"
+                    );
+
+
+                const fileUpload =
+                    document.getElementById(
+                        "complaintFile"
+                    );
+
+
+
+                function showFile(
+                    file,
+                    input
+                ) {
+
+                    if (!file) {
+                        return;
+                    }
+
+
+                    /* حذف الملف السابق */
+
+                    const oldFile =
+                        selectedFiles.querySelector(
+                            `[data-input="${input.id}"]`
+                        );
+
+
+                    if (oldFile) {
+                        oldFile.remove();
+                    }
+
+
+
+                    const fileBox =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    fileBox.className =
+                        "selected-file";
+
+
+                    fileBox.setAttribute(
+                        "data-input",
+                        input.id
+                    );
+
+
+
+                    const fileName =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    fileName.textContent =
+                        file.name;
+
+
+
+                    const removeButton =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    removeButton.type =
+                        "button";
+
+
+                    removeButton.className =
+                        "remove-file";
+
+
+                    removeButton.textContent =
+                        "حذف";
+
+
+
+                    removeButton.addEventListener(
+                        "click",
+                        function () {
+
+                            fileBox.remove();
+
+                            input.value = "";
+
+                        }
+                    );
+
+
+
+                    fileBox.appendChild(
+                        fileName
+                    );
+
+
+                    fileBox.appendChild(
+                        removeButton
+                    );
+
+
+                    selectedFiles.appendChild(
+                        fileBox
+                    );
+
+                }
+
+
+
+                /* صورة */
+
+                imageUpload.addEventListener(
+                    "change",
+                    function () {
+
+                        if (
+                            this.files.length > 0
+                        ) {
+
+                            showFile(
+                                this.files[0],
+                                this
+                            );
+
+                        }
+
+                    }
+                );
+
+
+
+                /* ملف */
+
+                fileUpload.addEventListener(
+                    "change",
+                    function () {
+
+                        if (
+                            this.files.length > 0
+                        ) {
+
+                            showFile(
+                                this.files[0],
+                                this
+                            );
+
+                        }
+
+                    }
+                );
+
+
+
+                /* =================================================
+                   ACTIVE NAVIGATION
+                ================================================= */
+
+                const navLinks =
+                    document.querySelectorAll(
+                        ".navbar a"
+                    );
+
+
+                const sections =
+                    document.querySelectorAll(
+                        "main section[id]"
+                    );
+
+
+
+                function updateActiveNav() {
+
+                    let current =
+                        "home";
+
+
+                    sections.forEach(
+                        function (section) {
+
+                            const top =
+                                section.offsetTop - 140;
+
+
+                            if (
+                                window.scrollY >= top
+                            ) {
+
+                                current =
+                                    section.id;
+
+                            }
+
+                        }
+                    );
+
+
+
+                    navLinks.forEach(
+                        function (link) {
+
+                            link.classList.toggle(
+                                "active",
+                                link.getAttribute(
+                                    "href"
+                                ) ===
+                                "#" + current
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                window.addEventListener(
+                    "scroll",
+                    updateActiveNav
+                );
+
+
+                updateActiveNav();
+
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

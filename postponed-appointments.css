@@ -1,0 +1,809 @@
+
+/* =========================
+   ROOT
+========================= */
+
+:root {
+    --green-dark: #054239;
+    --green: #428177;
+    --green-light: #eaf4f2;
+
+    --gold: #b9a779;
+    --gold-light: #fff8e8;
+
+    --bg: #f6fbfc;
+    --white: #ffffff;
+
+    --text: #263238;
+    --muted: #778589;
+
+    --border: #e1ebeb;
+
+    --shadow: 0 10px 30px rgba(5, 66, 57, 0.08);
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Tajawal", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    direction: rtl;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.postponed-section {
+    width: 100%;
+    padding: 50px 20px 80px;
+}
+
+
+.postponed-container {
+    width: min(950px, 100%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+.heading-line {
+    width: 5px;
+    height: 35px;
+
+    background: var(--green);
+
+    border-radius: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* أيقونة العنوان */
+
+.page-heading > i {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--green-light);
+    color: var(--green-dark);
+
+    border-radius: 12px;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+
+/* عنوان الصفحة */
+
+.page-heading h1 {
+    margin: 0;
+
+    color: var(--green-dark);
+
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   APPOINTMENTS LIST
+========================= */
+
+.appointments-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 380px);
+
+    justify-content: center;
+
+    gap: 16px;
+}
+
+
+/* =========================
+   APPOINTMENT CARD
+========================= */
+
+.appointment-card {
+    width: 380px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s ease;
+}
+
+
+.appointment-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(66, 129, 119, 0.35);
+
+    box-shadow:
+        0 14px 30px rgba(5, 66, 57, 0.11);
+}
+
+
+/* =========================
+   CARD TOP
+========================= */
+
+.card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-bottom: 12px;
+
+    margin-bottom: 14px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* =========================
+   DOCTOR INFO
+========================= */
+
+.doctor-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+}
+
+
+.doctor-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: var(--green-light);
+
+    color: var(--green);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+.doctor-info h2 {
+    color: var(--green-dark);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+}
+
+
+.doctor-info span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+}
+
+
+/* حالة مؤجل */
+
+.status.postponed {
+    background: var(--gold-light);
+
+    color: #9a7a2f;
+}
+
+
+.status.postponed i {
+    color: var(--gold);
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   APPOINTMENT DETAILS
+========================= */
+
+.appointment-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+    margin-bottom: 12px;
+}
+
+
+.detail-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.detail-item > i {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--green-light);
+
+    color: var(--green);
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+
+.detail-item div {
+    min-width: 0;
+}
+
+
+.detail-item span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+.detail-item strong {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   POSTPONED NOTE
+========================= */
+
+.postponed-note {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    padding: 11px 12px;
+
+    margin-bottom: 12px;
+
+    background: #fffaf0;
+
+    border: 1px solid #eee2c5;
+
+    border-radius: 10px;
+}
+
+
+.postponed-note > i {
+    color: var(--gold);
+
+    font-size: 15px;
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+}
+
+
+.postponed-note strong {
+    display: block;
+
+    color: #806625;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    margin-bottom: 2px;
+}
+
+
+.postponed-note p {
+    color: #766d59;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   DETAILS BUTTON
+========================= */
+
+.details-btn {
+    width: 100%;
+
+    min-height: 39px;
+
+    border-radius: 9px;
+
+    background: var(--green);
+
+    color: var(--white);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.details-btn:hover {
+    background: var(--green-dark);
+
+    transform: translateY(-2px);
+}
+
+
+.details-btn i {
+    font-size: 11px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .postponed-section {
+        padding: 45px 20px 70px;
+    }
+
+
+    .postponed-container {
+        width: min(600px, 100%);
+    }
+
+
+    .appointments-list {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        gap: 16px;
+    }
+
+
+    .appointment-card {
+        width: min(500px, 100%);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .postponed-section {
+        padding: 40px 15px 60px;
+    }
+
+
+    .postponed-container {
+        width: 100%;
+    }
+
+
+    /* العنوان */
+
+    .page-heading {
+        gap: 9px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .heading-line {
+        width: 4px;
+
+        height: 30px;
+    }
+
+
+    .page-heading > i {
+        width: 38px;
+        height: 38px;
+
+        font-size: 18px;
+
+        border-radius: 10px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 21px;
+    }
+
+
+    /* الكروت */
+
+    .appointments-list {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        justify-items: stretch;
+    }
+
+
+    .appointment-card {
+        width: 100%;
+
+        padding: 17px;
+
+        border-radius: 14px;
+    }
+
+
+    /* رأس الكرت */
+
+    .card-top {
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+
+    .doctor-info {
+        gap: 9px;
+    }
+
+
+    .doctor-icon {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 10px;
+    }
+
+
+    .doctor-info h2 {
+        font-size: 16px;
+    }
+
+
+    .doctor-info span {
+        font-size: 11px;
+    }
+
+
+    .status {
+        font-size: 11px;
+
+        padding: 5px 8px;
+    }
+
+
+    /* معلومات الموعد */
+
+    .appointment-details {
+        padding: 13px;
+
+        border-radius: 11px;
+    }
+
+
+    .detail-item {
+        gap: 9px;
+    }
+
+
+    .detail-item > i {
+        width: 29px;
+        height: 29px;
+    }
+
+
+    .detail-item strong {
+        font-size: 12px;
+    }
+
+
+    /* سبب التأجيل */
+
+    .postponed-note {
+        padding: 11px;
+    }
+
+
+    /* الزر */
+
+    .details-btn {
+        min-height: 43px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .postponed-section {
+        padding: 35px 12px 50px;
+    }
+
+
+    .page-heading {
+        gap: 7px;
+    }
+
+
+    .heading-line {
+        width: 4px;
+
+        height: 27px;
+    }
+
+
+    .page-heading > i {
+        width: 35px;
+        height: 35px;
+
+        font-size: 16px;
+
+        border-radius: 9px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 19px;
+    }
+
+
+    .appointment-card {
+        padding: 15px;
+
+        border-radius: 13px;
+    }
+
+
+    .doctor-icon {
+        width: 37px;
+        height: 37px;
+
+        font-size: 14px;
+    }
+
+
+    .doctor-info h2 {
+        font-size: 15px;
+    }
+
+
+    .doctor-info span {
+        font-size: 10px;
+    }
+
+
+    .status {
+        font-size: 10px;
+
+        padding: 4px 7px;
+    }
+
+
+    .appointment-details {
+        padding: 11px;
+    }
+
+
+    .detail-item > i {
+        width: 27px;
+        height: 27px;
+
+        font-size: 12px;
+    }
+
+
+    .detail-item span {
+        font-size: 9px;
+    }
+
+
+    .detail-item strong {
+        font-size: 11px;
+    }
+
+
+    .postponed-note {
+        padding: 10px;
+    }
+
+
+    .postponed-note strong {
+        font-size: 10px;
+    }
+
+
+    .postponed-note p {
+        font-size: 10px;
+    }
+
+
+    .details-btn {
+        min-height: 40px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+    .postponed-section {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+
+    .card-top {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .status {
+        width: fit-content;
+
+        align-self: flex-start;
+    }
+}

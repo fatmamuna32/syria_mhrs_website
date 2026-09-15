@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تسجيل الدخول</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+
+    <!-- ================= LOGIN ================= -->
+
+    <main>
+
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <h2>تسجيل الدخول</h2>
+
+
+                <form>
+
+
+                    <!-- رقم الهاتف -->
+
+                    <div class="input-group">
+
+                        <label for="phone">
+                            رقم الهاتف
+                        </label>
+
+                        <input
+                            type="text"
+                            id="phone"
+                            placeholder="ادخل رقم الهاتف"
+                        >
+
+                    </div>
+
+
+
+                    <!-- كلمة المرور -->
+
+                    <div class="input-group">
+
+                        <label for="password">
+                            كلمة المرور
+                        </label>
+
+                        <div class="password-box">
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="ادخل كلمة المرور"
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="togglePassword"
+                                aria-label="إظهار كلمة المرور">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- تسجيل الدخول -->
+
+                    <button
+                        type="submit"
+                        class="login-button">
+
+                        تسجيل الدخول
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+    <!-- ================= PASSWORD SCRIPT ================= -->
+
+    <script>
+
+        const password =
+            document.getElementById("password");
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+        const icon =
+            togglePassword.querySelector("i");
+
+
+        togglePassword.addEventListener("click", function () {
+
+            if (password.type === "password") {
+
+                /* إظهار كلمة المرور */
+
+                password.type = "text";
+
+                icon.classList.remove("fa-eye");
+
+                icon.classList.add("fa-eye-slash");
+
+                togglePassword.setAttribute(
+                    "aria-label",
+                    "إخفاء كلمة المرور"
+                );
+
+            } else {
+
+                /* إخفاء كلمة المرور */
+
+                password.type = "password";
+
+                icon.classList.remove("fa-eye-slash");
+
+                icon.classList.add("fa-eye");
+
+                togglePassword.setAttribute(
+                    "aria-label",
+                    "إظهار كلمة المرور"
+                );
+
+            }
+
+        });
+
+    
+const loginForm = document.querySelector(".login-card form");
+
+loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    alert("تم الإرسال بنجاح");
+});
+
+
+    </script>
+
+
+</body>
+
+</html>

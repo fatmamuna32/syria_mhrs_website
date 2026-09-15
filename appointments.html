@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>احجز موعدك الآن</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="appointments.css">
+    <link rel="stylesheet" href="header.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+
+        <!-- زر القائمة -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- الشعار -->
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </a>
+
+
+        <!-- القائمة -->
+
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="القائمة الرئيسية">
+
+           <a href="index.html">
+                الرئيسية
+            </a>
+
+            <a href="pharmacy.html">
+                الصيدليات المناوبة
+            </a>
+
+            <a href="appointments.html" class="active">
+                احجز موعد
+            </a>
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+        </nav>
+
+
+        <!-- تسجيل الدخول -->
+
+       <a
+            href="patient-profile.html"
+            class="user-icon"
+            aria-label="تسجيل الدخول"
+            title="تسجيل الدخول">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <section class="appointment-section">
+
+
+            <div class="appointment-container">
+
+
+                <!-- العنوان -->
+
+                <h1>
+                    احجز موعدك الآن
+                </h1>
+
+
+                <p class="description">
+                    اختر الطبيب والوقت المناسب
+                </p>
+
+
+                <hr
+                    style="
+                        width: 30%;
+                        margin: 20px auto;
+                        border: 1px solid #aca3a3;
+                    ">
+
+
+
+                <!-- =================================================
+                     APPOINTMENT FORM
+                ================================================== -->
+
+                <div
+                    class="appointment-card"
+                    id="appointmentCard">
+
+
+                    <h2>
+                        حجز موعد
+                    </h2>
+
+
+                    <form id="appointmentForm">
+
+
+                        <!-- العمر + الهاتف -->
+
+                        <div class="form-row">
+
+
+                            <!-- العمر -->
+
+                            <div class="form-group">
+
+                                <label for="age">
+                                    العمر
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="age"
+                                    name="age"
+                                    placeholder="أدخل العمر"
+                                    min="1"
+                                    max="120"
+                                    required>
+
+                            </div>
+
+
+
+                            <!-- الهاتف -->
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    رقم الهاتف
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="أدخل رقم الهاتف"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- الطبيب + التخصص -->
+
+                        <div class="form-row">
+
+
+                            <!-- الطبيب -->
+
+                            <div class="form-group">
+
+                                <label for="doctor">
+                                    الطبيب
+                                </label>
+
+                                <select
+                                    id="doctor"
+                                    name="doctor"
+                                    required>
+
+                                    <option value="">
+                                        اختر الطبيب
+                                    </option>
+
+                                    <option value="د. أحمد محمد">
+                                        د. أحمد محمد
+                                    </option>
+
+                                    <option value="د. محمد علي">
+                                        د. محمد علي
+                                    </option>
+
+                                    <option value="د. سارة أحمد">
+                                        د. سارة أحمد
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- التخصص -->
+
+                            <div class="form-group">
+
+                                <label for="specialty">
+                                    التخصص
+                                </label>
+
+                                <select
+                                    id="specialty"
+                                    name="specialty"
+                                    required>
+
+                                    <option value="">
+                                        اختر التخصص
+                                    </option>
+
+                                    <option value="طب الأسرة">
+                                        طب الأسرة
+                                    </option>
+
+                                    <option value="باطنية">
+                                        باطنية
+                                    </option>
+
+                                    <option value="أطفال">
+                                        أطفال
+                                    </option>
+
+                                    <option value="جلدية">
+                                        جلدية
+                                    </option>
+
+                                    <option value="قلب">
+                                        قلب
+                                    </option>
+
+                                    <option value="نساء وولادة">
+                                        نساء وولادة
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- التاريخ + الوقت -->
+
+                        <div class="form-row">
+
+
+                            <!-- التاريخ -->
+
+                            <div class="form-group">
+
+                                <label for="date">
+                                    التاريخ المتاح
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="date"
+                                    name="date"
+                                    required>
+
+                            </div>
+
+
+
+                            <!-- الوقت -->
+
+                            <div class="form-group">
+
+                                <label for="time">
+                                    الأوقات المتاحة
+                                </label>
+
+                                <select
+                                    id="time"
+                                    name="time"
+                                    required>
+
+                                    <option value="">
+                                        اختر الوقت
+                                    </option>
+
+                                    <option value="09:00 صباحًا">
+                                        09:00 صباحًا
+                                    </option>
+
+                                    <option value="10:00 صباحًا">
+                                        10:00 صباحًا
+                                    </option>
+
+                                    <option value="11:00 صباحًا">
+                                        11:00 صباحًا
+                                    </option>
+
+                                    <option value="12:00 ظهرًا">
+                                        12:00 ظهرًا
+                                    </option>
+
+                                    <option value="04:00 مساءً">
+                                        04:00 مساءً
+                                    </option>
+
+                                    <option value="05:00 مساءً">
+                                        05:00 مساءً
+                                    </option>
+
+                                    <option value="06:00 مساءً">
+                                        06:00 مساءً
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- زر التأكيد -->
+
+                        <button
+                            type="submit"
+                            class="submit-btn">
+
+                            تأكيد الموعد
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SUCCESS CARD
+                ================================================== -->
+
+                <div
+                    class="success-card"
+                    id="successCard">
+
+
+                    <!-- علامة النجاح -->
+
+                    <div class="success-icon">
+
+                        ✓
+
+                    </div>
+
+
+
+                    <h2>
+                        تم حجز الموعد بنجاح
+                    </h2>
+
+
+
+                    <p class="success-text">
+                        تم تأكيد حجز موعدك مع الطبيب
+                    </p>
+
+
+
+                    <!-- معلومات الحجز -->
+
+                    <div class="booking-info">
+
+
+                        <!-- الطبيب -->
+
+                        <div class="booking-row">
+
+                            <span>
+                                الطبيب
+                            </span>
+
+                            <strong id="successDoctor">
+                                -
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- التخصص -->
+
+                        <div class="booking-row">
+
+                            <span>
+                                التخصص
+                            </span>
+
+                            <strong id="successSpecialty">
+                                -
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- التاريخ -->
+
+                        <div class="booking-row">
+
+                            <span>
+                                التاريخ
+                            </span>
+
+                            <strong id="successDate">
+                                -
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- الوقت -->
+
+                        <div class="booking-row">
+
+                            <span>
+                                الوقت
+                            </span>
+
+                            <strong id="successTime">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- حجوزاتي -->
+
+                    <a
+                        href="completed-appointments.html"
+                        class="bookings-btn">
+
+                        <span class="bookings-icon">
+                            📅
+                        </span>
+
+                        الانتقال إلى حجوزاتي
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+
+        <!-- شعار الفوتر -->
+
+        <div class="footer-logo">
+
+            <img
+                src="ımage/Ministry-of-Healthlogooo.png"
+                alt="شعار وزارة الصحة">
+
+        </div>
+
+
+
+        <!-- روابط الفوتر -->
+
+        <div class="footer-links">
+
+  <a href="index.html">
+                الرئيسية
+            </a>
+
+
+            <a href="all-questions.html">
+                الأسئلة الشائعة
+            </a>
+
+
+            <a href="appointments.html">
+                احجز موعد
+            </a>
+
+
+            <a href="Medical_Tips.html">
+                نصائح طبية
+            </a>
+
+
+            <a href="doctor-profile.html">
+                الأطباء
+            </a>
+
+
+            <a href="about.html">
+                من نحن
+            </a>
+
+
+            <a href="privacy.html">
+                سياسة الخصوصية
+            </a>
+
+
+            <a href="volunteerr.html">
+                شروط التطوع
+            </a>
+
+
+            <a href="complaints.html">
+                قسم الشكاوى
+            </a>
+
+
+        </div>
+
+
+
+        <hr>
+
+
+
+        <p>
+            جميع الحقوق محفوظة للشركة © 2026
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =================================================
+           MOBILE MENU
+        ================================================== */
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+
+        const navbar =
+            document.getElementById("navbar");
+
+
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+
+                navbar.classList.toggle("show");
+
+
+                const isOpen =
+                    navbar.classList.contains("show");
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+            }
+        );
+
+
+
+        /* إغلاق القائمة بعد اختيار رابط */
+
+        document
+            .querySelectorAll(".navbar a")
+            .forEach(function (link) {
+
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+
+                        navbar.classList.remove("show");
+
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+                );
+
+            });
+
+
+
+        /* =================================================
+           APPOINTMENT
+        ================================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const form =
+                    document.getElementById(
+                        "appointmentForm"
+                    );
+
+
+                const appointmentCard =
+                    document.getElementById(
+                        "appointmentCard"
+                    );
+
+
+                const successCard =
+                    document.getElementById(
+                        "successCard"
+                    );
+
+
+
+                form.addEventListener(
+                    "submit",
+                    function (event) {
+
+
+                        event.preventDefault();
+
+
+
+                        /* البيانات */
+
+                        const doctor =
+                            document.getElementById(
+                                "doctor"
+                            ).value;
+
+
+                        const specialty =
+                            document.getElementById(
+                                "specialty"
+                            ).value;
+
+
+                        const date =
+                            document.getElementById(
+                                "date"
+                            ).value;
+
+
+                        const time =
+                            document.getElementById(
+                                "time"
+                            ).value;
+
+
+
+                        /* تحويل التاريخ */
+
+                        const dateObject =
+                            new Date(
+                                date + "T00:00:00"
+                            );
+
+
+                        const formattedDate =
+                            dateObject.toLocaleDateString(
+                                "ar-SA",
+                                {
+                                    year: "numeric",
+                                    month: "long",
+                                    day: "numeric"
+                                }
+                            );
+
+
+
+                        /* عرض معلومات الحجز */
+
+                        document.getElementById(
+                            "successDoctor"
+                        ).textContent = doctor;
+
+
+                        document.getElementById(
+                            "successSpecialty"
+                        ).textContent = specialty;
+
+
+                        document.getElementById(
+                            "successDate"
+                        ).textContent = formattedDate;
+
+
+                        document.getElementById(
+                            "successTime"
+                        ).textContent = time;
+
+
+
+                        /* إخفاء الفورم */
+
+                        appointmentCard.style.display =
+                            "none";
+
+
+
+                        /* إظهار النجاح */
+
+                        successCard.classList.add(
+                            "show"
+                        );
+
+
+
+                        /* الانتقال */
+
+                        successCard.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

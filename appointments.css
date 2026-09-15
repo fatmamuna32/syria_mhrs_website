@@ -1,0 +1,991 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root {
+    --green-dark: #054239;
+    --green: #428177;
+    --gold: #B9A779;
+    --bg: #f6fbfc;
+    --text: #263238;
+    --muted: #778589;
+    --border: #e2ebed;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Tajawal", Arial, Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+/* =====================================================
+   APPOINTMENT SECTION
+===================================================== */
+
+.appointment-section {
+
+    min-height: calc(100vh - 75px);
+
+    padding: 75px 20px;
+
+    background: #fff;
+}
+
+
+.appointment-container {
+
+    width: min(90%, 1000px);
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.appointment-container > h1 {
+
+    text-align: center;
+
+    color: var(--green-dark);
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+}
+
+
+.description {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    margin-bottom: 35px;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.appointment-card {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    background: var(--green);
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    border: 1px solid #edf2f2;
+
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .07);
+}
+
+
+.appointment-card h2 {
+
+    color: #fff;
+
+    font-size: 23px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================================
+   FORM ROW
+===================================================== */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+
+    margin-bottom: 7px;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+input,
+select {
+
+    width: 100%;
+
+    min-height: 46px;
+
+    border: 1px solid #d8e3e5;
+
+    border-radius: 8px;
+
+    padding: 12px 14px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: var(--text);
+
+    transition: .25s ease;
+
+    cursor: pointer;
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 3px rgba(185, 167, 121, .18);
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.submit-btn {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: var(--green-dark);
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+
+    margin-top: 5px;
+}
+
+
+.submit-btn:hover {
+
+    background: var(--gold);
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   SUCCESS CARD
+===================================================== */
+
+.success-card {
+
+    display: none;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 20px auto 0;
+
+    padding: 40px 35px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 8px 35px rgba(0, 0, 0, .08);
+
+    text-align: center;
+}
+
+
+.success-card.show {
+
+    display: block;
+
+    animation: showSuccess .35s ease;
+}
+
+
+@keyframes showSuccess {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   SUCCESS ICON
+===================================================== */
+
+.success-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #e2f2f0;
+
+    color: var(--green);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 45px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   SUCCESS TITLE
+===================================================== */
+
+.success-card h2 {
+
+    color: var(--green-dark);
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+.success-text {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   BOOKING INFO
+===================================================== */
+
+.booking-info {
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
+
+    text-align: right;
+}
+
+
+.booking-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 18px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.booking-row:last-child {
+
+    border-bottom: 0;
+}
+
+
+.booking-row span {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+.booking-row strong {
+
+    color: var(--green-dark);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BOOKINGS BUTTON
+===================================================== */
+
+.bookings-btn {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: var(--green-dark);
+
+    color: #fff;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+
+.bookings-btn:hover {
+
+    background: var(--gold);
+
+    color: #fff;
+}
+
+
+.bookings-icon {
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .appointment-section {
+
+        padding: 65px 20px;
+    }
+
+
+    .appointment-container {
+
+        width: 92%;
+    }
+
+
+    .appointment-container > h1 {
+
+        font-size: 30px;
+    }
+
+
+    .appointment-card {
+
+        max-width: 800px;
+
+        padding: 30px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .appointment-section {
+
+        min-height: calc(100vh - 78px);
+
+        padding: 45px 15px;
+    }
+
+
+    .appointment-container {
+
+        width: 100%;
+    }
+
+
+    .appointment-container > h1 {
+
+        font-size: 26px;
+
+        line-height: 1.5;
+    }
+
+
+    .description {
+
+        font-size: 14px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* ================= FORM CARD ================= */
+
+    .appointment-card {
+
+        width: 100%;
+
+        padding: 24px 18px;
+
+        border-radius: 14px;
+    }
+
+
+    .appointment-card h2 {
+
+        font-size: 21px;
+
+        margin-bottom: 23px;
+    }
+
+
+    /* ================= FORM ROW ================= */
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .form-group {
+
+        margin-bottom: 17px;
+    }
+
+
+    input,
+    select {
+
+        min-height: 46px;
+
+        font-size: 14px;
+    }
+
+
+    .submit-btn {
+
+        min-height: 48px;
+
+        font-size: 14px;
+    }
+
+
+    /* ================= SUCCESS ================= */
+
+    .success-card {
+
+        width: 100%;
+
+        padding: 30px 18px;
+
+        border-radius: 14px;
+    }
+
+
+    .success-card h2 {
+
+        font-size: 22px;
+    }
+
+
+    .success-text {
+
+        font-size: 13px;
+    }
+
+
+    .booking-row {
+
+        padding: 13px 14px;
+
+        gap: 10px;
+    }
+
+
+    .booking-row span,
+    .booking-row strong {
+
+        font-size: 13px;
+    }
+
+
+    .bookings-btn {
+
+        min-height: 47px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .appointment-section {
+
+        padding: 35px 12px 50px;
+    }
+
+
+    .appointment-container > h1 {
+
+        font-size: 23px;
+    }
+
+
+    .description {
+
+        font-size: 13px;
+    }
+
+
+    .appointment-card {
+
+        padding: 20px 14px;
+    }
+
+
+    .appointment-card h2 {
+
+        font-size: 20px;
+    }
+
+
+    input,
+    select {
+
+        font-size: 13px;
+
+        min-height: 45px;
+
+        padding: 11px 12px;
+    }
+
+
+    .form-group label {
+
+        font-size: 13px;
+    }
+
+
+    .submit-btn {
+
+        font-size: 13px;
+
+        min-height: 47px;
+    }
+
+
+    /* ================= SUCCESS ================= */
+
+    .success-card {
+
+        padding: 25px 14px;
+    }
+
+
+    .success-icon {
+
+        width: 65px;
+
+        height: 65px;
+
+        font-size: 38px;
+    }
+
+
+    .success-card h2 {
+
+        font-size: 20px;
+    }
+
+
+    .success-text {
+
+        font-size: 12px;
+    }
+
+
+    .booking-row {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 2px;
+    }
+
+
+    .booking-row span,
+    .booking-row strong {
+
+        font-size: 13px;
+    }
+
+}
+
+/* =====================================================
+   MOBILE HEADER MENU
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        width: 100%;
+        height: 78px;
+        min-height: 78px;
+
+        padding: 0 5%;
+
+        position: sticky;
+        top: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        z-index: 1000;
+    }
+
+
+    /* ================= LOGO CENTER ================= */
+
+    .site-header .logo {
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+        margin: 0;
+        padding: 0;
+
+        z-index: 3;
+    }
+
+    .site-header .logo img {
+        width: 100px;
+        height: 48px;
+
+        object-fit: contain;
+        display: block;
+    }
+
+
+    /* ================= MENU BUTTON RIGHT ================= */
+
+    .site-header .menu-toggle {
+        display: block;
+
+        position: absolute;
+
+        right: 5%;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        width: auto;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+
+        border: none;
+        background: transparent;
+
+        color: var(--green-dark);
+
+        font-size: 24px;
+        line-height: 1;
+
+        cursor: pointer;
+
+        z-index: 10001;
+    }
+
+
+    /* ================= LOGIN LEFT ================= */
+
+    .site-header .user-icon {
+        position: absolute;
+
+        left: 5%;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        margin: 0;
+        padding: 0;
+
+        color: var(--green-dark);
+
+        font-size: 20px;
+
+        z-index: 10001;
+    }
+
+
+    /* ================= NAVBAR ================= */
+
+    .site-header .navbar {
+
+        position: absolute;
+
+        top: 78px;
+        right: 0;
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 6px 5%;
+
+        background: #fff;
+
+        border-top: 1px solid #edf1f2;
+        border-bottom: 1px solid #e2ebed;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        pointer-events: none;
+
+        transition:
+            opacity .25s ease,
+            transform .25s ease,
+            visibility .25s ease;
+
+        z-index: 10000;
+    }
+
+
+    /* ================= OPEN ================= */
+
+    .site-header .navbar.show {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+
+        pointer-events: auto;
+    }
+
+
+    /* ================= LINKS ================= */
+
+    .site-header .navbar a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 13px 10px;
+
+        text-align: right;
+
+        color: var(--green-dark);
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        white-space: nowrap;
+
+        border-bottom: 1px solid #edf2f2;
+
+        transition: .2s ease;
+    }
+
+
+    .site-header .navbar a:last-child {
+        border-bottom: none;
+    }
+
+
+    .site-header .navbar a:hover,
+    .site-header .navbar a.active {
+
+        background: #edf6f4;
+
+        color: var(--green);
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .site-header {
+        height: 75px;
+        min-height: 75px;
+    }
+
+
+    .site-header .logo img {
+        width: 90px;
+        height: 43px;
+    }
+
+
+    .site-header .menu-toggle {
+        right: 5%;
+        font-size: 22px;
+    }
+
+
+    .site-header .user-icon {
+        left: 5%;
+        font-size: 18px;
+    }
+
+
+    .site-header .navbar {
+        top: 75px;
+        padding: 6px 5%;
+    }
+
+
+    .site-header .navbar a {
+        padding: 12px 10px;
+        font-size: 13px;
+        text-align: right;
+    }
+}
